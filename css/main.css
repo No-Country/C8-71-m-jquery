@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+/* resetenado padding y margin */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /*every 1rem = 1px*/
+  font-size: 6.25%;
+}
+
+/* definiendo variables */
+:root {
+  /* --main: #233251;
+  --background: #f8f9fc;
+  --contrast: #9e7824;
+  --text: #0f1624;
+  --gris: #7c818a; */
+
+  --maintext: 14rem;
+  --titulo: 42rem;
+
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 72rem;
+  background-color: gray;
+  position: fixed;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 0 28px;
+  box-shadow: 0rem 1rem 4rem black;
+}
+
+.header__logo i {
+  font-size: 28rem;
+  color: white;
+  cursor: pointer;
+}
+
+.header__buscar {
+  position: relative;
+  width: 320rem;
+}
+
+.buscar__input {
+  font-size: var(--maintext);
+  outline: none;
+  height: 32rem;
+  width: 320rem;
+  border-radius: 50px;
+  border: none;
+  padding: 0 14rem;
+}
+
+.buscar__icono {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 16rem;
+  font-size: var(--maintext);
+  cursor: pointer;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+.header__opciones {
+  margin: 0 48rem;
+}
+.header__opciones a {
+  font-size: var(--maintext);
+  text-decoration: none;
+  color: white;
+}
+
+.header__perfil {
+  width: 32rem;
+  height: 32rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.perfil__icono {
+  font-size: 20rem;
+  color: gray;
+}
+
+/* BANER DE IMAGENES */
+.banner {
+  height: 664rem;
+  width: 100%;
+  position: relative;
+}
+
+.banner__imagen {
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner__bottom {
+  position: absolute;
+  bottom: 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 180rem;
+  width: 100%;
+}
+
+.banner__titulo {
+  position: absolute;
+  margin: 0 40rem;
+  font-size: var(--titulo);
+  text-transform: uppercase;
+  bottom: 69rem;
+}
+
+.banner__slider {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  width: 100%;
+  font-size: 10rem;
+  bottom: 24rem;
+}
+
+.banner__slider i {
+  cursor: pointer;
+}
+
+/* SECCION HOSPEDAJES */
+
+.hospedajes {
+  margin: 40rem;
+}
+
+.hospedajes__filtro {
+  padding: 0 40rem;
+  background-color: gray;
+  border-radius: 20rem;
+  height: 90rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16rem;
+}
+
+.filtro__icono {
+  color: white;
+  font-size: 32rem;
+}
+
+.filtro__abrir {
+  width: 120rem;
+  height: 48rem;
+  border-radius: 24rem;
+  border: none;
+  cursor: pointer;
+}
+
+.hospedajes__titulo{
+  font-size: medium;
+  text-transform: uppercase;
+  margin: 40rem 0 20rem;
+}
