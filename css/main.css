@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&family=Roboto:wght@300;400;500&display=swap');
+/* font-family: 'Noto Sans Display', sans-serif;
+font-family: 'Roboto', sans-serif; */
 
 /* resetenado padding y margin */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;       
   margin: 0;
   padding: 0;
 }
@@ -14,17 +16,18 @@ html {
 
 /* definiendo variables */
 :root {
-  /* --main: #233251;
-  --background: #f8f9fc;
-  --contrast: #9e7824;
-  --text: #0f1624;
-  --gris: #7c818a; */
+  --main: #00656A;
+  --white: #FAFAFA;
+  --secundario: #73D1D7;
+  --negro: #333333;
 
-  --maintext: 14rem;
-  --titulo: 42rem;
+  --maintext: 16rem;
+  --titulo: 40rem;
 
   scroll-behavior: smooth;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: var(--negro);
 }
 
 /* HEADER */
@@ -32,19 +35,19 @@ html {
 header {
   width: 100%;
   height: 72rem;
-  background-color: gray;
+  background-color: var(--main);
   position: fixed;
   z-index: 100;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   padding: 0 28px;
-  box-shadow: 0rem 1rem 4rem black;
+  box-shadow: 0rem 1rem 4rem var(--negro);
 }
 
 .header__logo i {
   font-size: 28rem;
-  color: white;
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -84,13 +87,13 @@ header {
 .header__opciones a {
   font-size: var(--maintext);
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 .header__perfil {
   width: 32rem;
   height: 32rem;
-  background-color: white;
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +103,7 @@ header {
 
 .perfil__icono {
   font-size: 20rem;
-  color: gray;
+  color: var(--main);
 }
 
 /* BANER DE IMAGENES */
@@ -129,14 +132,6 @@ header {
   width: 100%;
 }
 
-.banner__titulo {
-  position: absolute;
-  margin: 0 40rem;
-  font-size: var(--titulo);
-  text-transform: uppercase;
-  bottom: 69rem;
-}
-
 .banner__slider {
   position: absolute;
   display: flex;
@@ -152,14 +147,20 @@ header {
 }
 
 /* SECCION HOSPEDAJES */
-
 .hospedajes {
   margin: 40rem;
 }
 
+.hospedajes__titulo {
+  margin: 40rem 0;
+  font-size: var(--titulo);
+  text-transform: uppercase;
+  font-family: 'Noto Sans Display', sans-serif;
+}
+
 .hospedajes__filtro {
   padding: 0 40rem;
-  background-color: gray;
+  background-color: var(--secundario);
   border-radius: 20rem;
   height: 90rem;
   display: flex;
@@ -169,8 +170,8 @@ header {
 }
 
 .filtro__icono {
-  color: white;
-  font-size: 32rem;
+  color: var(--negro);
+  font-size: var(--maintext); 
 }
 
 .filtro__abrir {
@@ -179,9 +180,11 @@ header {
   border-radius: 24rem;
   border: none;
   cursor: pointer;
+  background-color: var(--secundario);
+  border: 1rem solid var(--negro);
 }
 
-.hospedajes__titulo{
+.hospedajes__subtitulo{
   font-size: medium;
   text-transform: uppercase;
   margin: 40rem 0 20rem;
