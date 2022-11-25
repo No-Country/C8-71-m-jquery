@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&family=Roboto:wght@400;500&display=swap');
 /* font-family: 'Noto Sans Display', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
@@ -7,6 +7,8 @@ font-family: 'Roboto', sans-serif; */
   box-sizing: border-box;       
   margin: 0;
   padding: 0;
+
+  
 }
 
 html {
@@ -16,51 +18,58 @@ html {
 
 /* definiendo variables */
 :root {
-  --main: #00656A;
+  --main: rgb(0, 101, 106);
   --white: #FAFAFA;
-  --secundario: #73D1D7;
+  --secundario: rgb(115, 209, 215);
   --negro: #333333;
 
   --maintext: 16rem;
   --titulo: 40rem;
 
-  scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: var(--negro);
+
+  scroll-behavior: smooth;
+
 }
 
 /* HEADER */
 
 header {
   width: 100%;
-  height: 72rem;
+  height: 90rem;
   background-color: var(--main);
   position: fixed;
   z-index: 100;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding: 0 28px;
+  padding: 0 90rem;
   box-shadow: 0rem 1rem 4rem var(--negro);
 }
 
-.header__logo i {
-  font-size: 28rem;
-  color: var(--white);
+.header__logo svg {
+  height: 66rem;
+  width: auto;
   cursor: pointer;
+}
+
+.header__logo svg path{
+  fill: var(--white);
 }
 
 .header__buscar {
   position: relative;
-  width: 320rem;
+  width: 400rem;
+  margin: 0 auto;
 }
 
 .buscar__input {
   font-size: var(--maintext);
   outline: none;
-  height: 32rem;
-  width: 320rem;
+  height: 38rem;
+  width: inherit;
   border-radius: 50px;
   border: none;
   padding: 0 14rem;
@@ -88,22 +97,59 @@ header {
   font-size: var(--maintext);
   text-decoration: none;
   color: var(--white);
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: var(--maintext);
+  border-radius: 50rem;
 }
 
-.header__perfil {
-  width: 32rem;
-  height: 32rem;
+.header__opciones a:hover{
+  background-color: rgba(115, 209, 215, 0.60);
+}
+
+.header__perfil{
+  width: 116rem;
+  height: 59rem;
+  border: 2rem solid var(--white);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 50rem;
+  cursor: pointer;
+  background-color: var(--main);
+  
+}
+
+.header__perfil:hover{
+  /* filter: drop-shadow(0 2rem 4rem var(--secundario)); */
+  filter:brightness(130%);
+
+}
+
+.header__perfil>i{
+  color: var(--white);
+  font-size: var(--maintext);
+}
+.perfil__imagen {
+  height: 46rem;
+  width: 46rem;
   background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  cursor: pointer;
+  border: 2rem solid var(--white);
+  overflow: hidden;
+
 }
 
 .perfil__icono {
-  font-size: 20rem;
+  font-size: 32rem;
   color: var(--main);
+}
+
+.perfil__imagen img{
+  height: inherit;
 }
 
 /* BANER DE IMAGENES */
@@ -138,22 +184,30 @@ header {
   justify-content: center;
   gap: 8rem;
   width: 100%;
-  font-size: 10rem;
   bottom: 24rem;
 }
 
-.banner__slider i {
+.banner__slider button{
+  height: 10rem;
+  width: 10rem;
+  border: 1rem solid var(--negro);
+  border-radius: 50%;
   cursor: pointer;
+}
+
+.banner__slider button.active{
+  background-color: var(--negro);
 }
 
 /* SECCION HOSPEDAJES */
 .hospedajes {
-  margin: 40rem;
+  margin: 0 90rem;
 }
 
 .hospedajes__titulo {
-  margin: 40rem 0;
+  margin: 28rem 0;
   font-size: var(--titulo);
+  color: var(--negro);
   text-transform: uppercase;
   font-family: 'Noto Sans Display', sans-serif;
 }
@@ -162,30 +216,77 @@ header {
   padding: 0 40rem;
   background-color: var(--secundario);
   border-radius: 20rem;
-  height: 90rem;
+  height: 162rem;
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 16rem;
+  justify-content: space-between;
 }
-
-.filtro__icono {
-  color: var(--negro);
-  font-size: var(--maintext); 
+.filtro__izq{
+  display: flex;
+  align-items: center;
+  gap: var(--maintext);
 }
-
 .filtro__abrir {
-  width: 120rem;
+  width: 152rem;
   height: 48rem;
   border-radius: 24rem;
   border: none;
   cursor: pointer;
-  background-color: var(--secundario);
-  border: 1rem solid var(--negro);
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--maintext);
 }
+
+.filtro__abrir i,
+.filtro__abrir p{
+  color: var(--white);
+  font-size: var(--maintext); 
+  text-transform: uppercase;
+}
+
+.filtro__izq a{
+  color: var(--wh);
+  font-size: var(--maintext); 
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.filtro__izq a:hover{
+  color: var(--main);
+}
+
+.filtro__mostrar{
+  width: 216rem;
+  height: 48rem;
+  border-radius: 24rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--maintext);
+}
+
+.filtro__mostrar:hover,
+.filtro__abrir:hover{
+  filter:brightness(130%);
+
+}
+
+.filtro__mostrar i,
+.filtro__mostrar p{
+  color: var(--white);
+  font-size: var(--maintext); 
+  text-transform: uppercase;
+}
+
 
 .hospedajes__subtitulo{
   font-size: medium;
   text-transform: uppercase;
   margin: 40rem 0 20rem;
 }
+
