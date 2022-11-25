@@ -385,3 +385,117 @@ gap: 20rem;
 }
 
 /* INCIO DE SESION */
+
+.sesion {
+  margin: 0 90rem;
+}
+
+.sesion__subtitulo{
+  margin-bottom: 48rem;
+  font-size: 24rem;
+}
+
+.sesion__mensaje{
+  position: relative;
+  padding: 0 40rem;
+  background-color: var(--secundario);
+  border-radius: 20rem;
+  height: 232rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.mensaje__cerrar{
+  position: absolute;
+  right: 14rem;
+  top: 14rem;
+  font-size: 24rem;
+  cursor: pointer;
+}
+
+.sesion__mensaje p{
+  font-size: 24rem;
+  width: 80%;
+}
+
+.sesion__iniciar,
+.sesion__registrarme{
+  width: 176rem;
+  height: 48rem;
+  border-radius: 24rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--main);
+  text-transform: uppercase;
+  color: var(--white);
+  margin-right: 20rem;
+}
+
+.sesion__iniciar:hover,
+.sesion__registrarme:hover{
+  filter: brightness(130%);
+}
+
+/* ATRACTIVOS TURISTICOS */
+.turisticos{
+  margin: 40rem 90rem;
+  overflow: hidden;
+}
+
+.turisticos__titulo{
+  margin: 48rem 0;
+  font-size: 24rem;
+  text-transform: uppercase;
+}
+.turisticos__contenedor{
+  width: 3000rem;
+}
+
+.turisticos__card{
+  display: inline-block;
+  width: 400rem;
+  height: 332rem;
+  margin-right: 24rem;
+  background-color: var(--white);
+  filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
+  border-radius: 20rem;
+  overflow: hidden;
+}
+
+.turisticos__card .card__desc{
+  padding: 16rem 24rem 24rem;
+}
+
+.turisticos__card .card__desc .card__nombre{
+  margin-bottom: 20rem;
+  font-size: 20rem;
+  color: var(--main);
+  text-transform: uppercase;
+}
+
+/* FOOTER */
+footer{
+  width: 100%;
+  height: 90rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main);
+  gap: 70rem;
+}
+
+footer p{
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+footer a{
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 16rem;
+}
+
+footer a i{
+  font-size: 24rem;
+}
