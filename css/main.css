@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&family=Roboto:wght@400;500&display=swap");
 /* font-family: 'Noto Sans Display', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 /* resetenado padding y margin */
 * {
-  box-sizing: border-box;       
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: var(--maintext);
 
-  
 }
 
 html {
@@ -19,19 +19,18 @@ html {
 /* definiendo variables */
 :root {
   --main: rgb(0, 101, 106);
-  --white: #FAFAFA;
+  --white: #fafafa;
   --secundario: rgb(115, 209, 215);
   --negro: #333333;
 
   --maintext: 16rem;
   --titulo: 40rem;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: var(--negro);
 
   scroll-behavior: smooth;
-
 }
 
 /* HEADER */
@@ -55,7 +54,7 @@ header {
   cursor: pointer;
 }
 
-.header__logo svg path{
+.header__logo svg path {
   fill: var(--white);
 }
 
@@ -99,15 +98,16 @@ header {
   color: var(--white);
   text-transform: uppercase;
   font-weight: 400;
-  padding: var(--maintext);
+  padding: 12rem;
   border-radius: 50rem;
+  white-space: nowrap;
 }
 
-.header__opciones a:hover{
-  background-color: rgba(115, 209, 215, 0.60);
+.header__opciones a:hover {
+  background-color: rgba(115, 209, 215, 0.6);
 }
 
-.header__perfil{
+.header__perfil {
   width: 116rem;
   height: 59rem;
   border: 2rem solid var(--white);
@@ -117,16 +117,14 @@ header {
   border-radius: 50rem;
   cursor: pointer;
   background-color: var(--main);
-  
 }
 
-.header__perfil:hover{
+.header__perfil:hover {
   /* filter: drop-shadow(0 2rem 4rem var(--secundario)); */
-  filter:brightness(130%);
-
+  filter: brightness(130%);
 }
 
-.header__perfil>i{
+.header__perfil > i {
   color: var(--white);
   font-size: var(--maintext);
 }
@@ -140,7 +138,6 @@ header {
   border-radius: 50%;
   border: 2rem solid var(--white);
   overflow: hidden;
-
 }
 
 .perfil__icono {
@@ -148,7 +145,7 @@ header {
   color: var(--main);
 }
 
-.perfil__imagen img{
+.perfil__imagen img {
   height: inherit;
 }
 
@@ -187,7 +184,7 @@ header {
   bottom: 24rem;
 }
 
-.banner__slider button{
+.banner__slider button {
   height: 10rem;
   width: 10rem;
   border: 1rem solid var(--negro);
@@ -195,7 +192,7 @@ header {
   cursor: pointer;
 }
 
-.banner__slider button.active{
+.banner__slider button.active {
   background-color: var(--negro);
 }
 
@@ -209,7 +206,7 @@ header {
   font-size: var(--titulo);
   color: var(--negro);
   text-transform: uppercase;
-  font-family: 'Noto Sans Display', sans-serif;
+  font-family: "Noto Sans Display", sans-serif;
 }
 
 .hospedajes__filtro {
@@ -221,7 +218,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.filtro__izq{
+.filtro__izq {
   display: flex;
   align-items: center;
   gap: var(--maintext);
@@ -240,24 +237,24 @@ header {
 }
 
 .filtro__abrir i,
-.filtro__abrir p{
+.filtro__abrir p {
   color: var(--white);
-  font-size: var(--maintext); 
+  font-size: var(--maintext);
   text-transform: uppercase;
 }
 
-.filtro__izq a{
+.filtro__izq a {
   color: var(--wh);
-  font-size: var(--maintext); 
+  font-size: var(--maintext);
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.filtro__izq a:hover{
+.filtro__izq a:hover {
   color: var(--main);
 }
 
-.filtro__mostrar{
+.filtro__mostrar {
   width: 216rem;
   height: 48rem;
   border-radius: 24rem;
@@ -271,22 +268,93 @@ header {
 }
 
 .filtro__mostrar:hover,
-.filtro__abrir:hover{
-  filter:brightness(130%);
-
+.filtro__abrir:hover {
+  filter: brightness(130%);
 }
 
 .filtro__mostrar i,
-.filtro__mostrar p{
+.filtro__mostrar p {
   color: var(--white);
-  font-size: var(--maintext); 
+  font-size: var(--maintext);
   text-transform: uppercase;
 }
 
-
-.hospedajes__subtitulo{
-  font-size: medium;
+.hospedajes__subtitulo {
+  font-size: 24rem;
   text-transform: uppercase;
-  margin: 40rem 0 20rem;
+  margin: 40rem 0;
 }
 
+.hospedajes__contenedor{
+  display: flex;
+  justify-content: space-between;
+  gap: 20rem;
+  flex-flow: row wrap;
+}
+
+.hospedajes__card{
+  position: relative;
+  width: 400rem;
+  height: 400rem;
+  background-color: var(--white);
+  filter: drop-shadow(0rem 4rem 4rem var(--negro));
+  border-radius: 20rem;
+  overflow: hidden;
+}
+
+.card__favorito{
+  position: absolute;
+  top: 0;
+  height: 52rem;
+  width: 100%;
+  background: rgb(176,82,82);
+  background: linear-gradient(0deg, rgba(176,82,82,0) 0%, rgba(51,51,51,1) 100%);
+}
+
+.card__favorito i{
+  position: inherit;
+  top: 12rem;
+  right: 12rem;
+  font-size: 24rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.card__favorito.activo i{
+  color: OrangeRed;
+}
+
+.card__desc{
+  padding: 16rem 24rem 24rem;
+}
+
+.card__desc .card__titulo{
+  justify-content: space-between;
+  margin-bottom: 20rem;
+}
+
+.card__rating{
+  display: flex;
+  gap: 8rem;
+}
+
+.card__desc>div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 12rem;
+}
+.card__fecha p,
+.card__email p,
+.card__telefono p,
+.card__ubicacion p{
+  position: absolute;
+  left: 48rem;
+  font-size: 14rem;
+  white-space: nowrap;
+}
+
+.card__nombre{
+  font-size: 20rem;
+  color: var(--main);
+  text-transform: uppercase;
+}
