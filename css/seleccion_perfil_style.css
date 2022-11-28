@@ -1,0 +1,75 @@
+@import url(./main.css);
+
+.seleccionPerfil {
+  margin-top: 90rem;
+  display: flex;
+  height: calc(100vh - 180rem);
+  align-items: center;
+}
+
+.seleccionPerfil__turista,
+.seleccionPerfil__anfitrion {
+  position: relative;
+  width: 50vw;
+  height: inherit;
+  padding: 440rem 140rem 140rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.turista__overlay,
+.anfitrion__overlay {
+  position: absolute;
+  background-color: black;
+  height: inherit;
+  width: inherit;
+  top: 0;
+  opacity: 75%;
+  display: none;
+}
+
+.turista__overlay.active,
+.anfitrion__overlay.active{
+  display: block;
+}
+
+.seleccionPerfil h2 {
+  font-size: var(--titulo);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.seleccionPerfil p {
+  font-size: var(--main);
+  color: var(--white);
+  margin-top: 12rem;
+}
+
+.seleccionPerfil button {
+  font-size: var(--main);
+  color: var(--white);
+  padding: 16rem 32rem;
+  border: none;
+  border-radius: 24rem;
+  text-transform: uppercase;
+  background-color: var(--main);
+  margin-top: 52rem;
+  cursor: pointer;
+}
+
+.seleccionPerfil button:hover {
+  background-color: rgba(115, 209, 215, 0.6);
+}
+
+.seleccionPerfil__turista {
+  background-image: url(../recursos/tipousuario/turistaImg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.seleccionPerfil__anfitrion {
+  background-image: url(../recursos/tipousuario/anfitrionImg.jpg);
+  background-size: cover;
+  background-position: center;
+}

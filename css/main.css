@@ -40,6 +40,7 @@ header {
   height: 90rem;
   background-color: var(--main);
   position: fixed;
+  top: 0;
   z-index: 100;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -151,7 +152,8 @@ header {
 
 /* BANER DE IMAGENES */
 .banner {
-  height: 664rem;
+  margin-top: 90rem;
+  height: 644rem;
   width: 100%;
   position: relative;
 }
@@ -164,7 +166,7 @@ header {
 
 .banner__bottom {
   position: absolute;
-  bottom: 0;
+  bottom: 0rem;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
