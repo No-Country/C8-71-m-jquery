@@ -6,17 +6,28 @@
   height: calc(100vh - 180rem);
   align-items: center;
 }
+.contenedorizq__seleccionPerfil,
+.contenedorder__seleccionPerfil{
+  width: 50vw;
+  height: inherit;
+}
 
 .seleccionPerfil__turista,
 .seleccionPerfil__anfitrion {
   position: relative;
-  width: 50vw;
+  width: inherit;
   height: inherit;
   padding: 440rem 140rem 140rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Haciendo visible cuando se tiene la clase 'active' */
+.seleccionPerfil__turista.active,
+.seleccionPerfil__anfitrion.active{
+  display: flex;
 }
 
 .turista__overlay,
@@ -26,13 +37,18 @@
   height: inherit;
   width: inherit;
   top: 0;
-  opacity: 75%;
-  display: none;
+  z-index: -100;
+  opacity: 0%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .turista__overlay.active,
 .anfitrion__overlay.active{
-  display: block;
+  opacity: 75%;
+  z-index: 100;
+  
 }
 
 .seleccionPerfil h2 {
@@ -47,7 +63,8 @@
   margin-top: 12rem;
 }
 
-.seleccionPerfil button {
+.seleccionPerfil .turista__ingresar,
+.seleccionPerfil .anfitrion__ingresar{
   font-size: var(--main);
   color: var(--white);
   padding: 16rem 32rem;
@@ -59,8 +76,9 @@
   cursor: pointer;
 }
 
-.seleccionPerfil button:hover {
-  background-color: rgba(115, 209, 215, 0.6);
+.seleccionPerfil .turista__ingresar:hover,
+.seleccionPerfil .anfitrion__ingresar:hover {
+  filter: brightness(130%);
 }
 
 .seleccionPerfil__turista {
@@ -72,4 +90,194 @@
   background-image: url(../recursos/tipousuario/anfitrionImg.jpg);
   background-size: cover;
   background-position: center;
+}
+
+/* INICIO SESION TURISTA y ANFITRION*/
+
+.inicioSesion__turista,
+.inicioSesion__anfitrion{
+  position: relative;
+  width: inherit;
+  height: inherit;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Haciendo visible cuando se tiene la clase 'active' */
+.inicioSesion__turista.active,
+.inicioSesion__anfitrion.active{
+  display: flex;
+}
+
+
+.incioSesion__volver{
+  position: absolute;
+  top: 20rem;
+  left: 20rem;
+  margin: 0;
+  background-color: var(--white);
+  padding: 8rem 16rem;
+  border-radius: 24rem;
+  border: none;
+  color: var(--negro);
+  display: flex;
+  align-items: center;
+  gap: var(--maintext);
+  cursor: pointer;
+}
+
+.incioSesion__volver p{
+  color: var(--negro);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.incioSesion__volver:hover{
+  background-color: #ebebeb;
+}
+
+.inicioSesion__form--turista,
+.inicioSesion__form--anfitrion{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.sesion__iniciar{
+  width: 376rem;
+  margin-bottom: 24rem;
+  height: 48rem;
+  border-radius: 24rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--main);
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.sesion__iniciar:hover{
+  filter: brightness(130%);
+}
+
+.inicioSesion__turista h3,
+.inicioSesion__anfitrion h3{
+  font-size: 30rem;
+  font-weight:normal;
+}
+
+.sesion__google{
+  position: relative;
+  height: 48rem;
+  width: 376rem;
+  border-radius: 24rem;
+  border: none;
+  background-color: var(--contraste);
+  color: var(--white);
+  margin-top: 40rem;
+  cursor: pointer;
+}
+
+.sesion__google:hover{
+  filter: brightness(115%);
+}
+
+.sesion__google i{
+  position: absolute;
+  left: 20rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24rem;
+}
+
+.sesion__google span{
+  text-transform: uppercase;
+  
+}
+.separador{
+  position: relative;
+  padding: 28rem 12rem;
+}
+.separador::before{    
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: calc((376rem)/2  - 16rem);
+  border-bottom: 1px solid var(--negro);
+  opacity: 35%;
+}
+
+.separador::after{    
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: calc((376rem)/2  - 16rem);
+  border-bottom: 1px solid var(--negro);
+  opacity: 35%;
+}
+
+.inicioSesion__input{
+  position: relative;
+  margin-bottom: 44rem;
+}
+
+.inicioSesion__input input{
+  height: 48rem;
+  width: 376rem;
+  border-radius: 24rem;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  outline: none;
+  background-color: #ECECEC;
+  color: var(--negro);
+  padding: 0 28rem;
+  text-transform: lowercase;
+}
+
+.inicioSesion__input input.input__error{
+  border: 1rem solid red;
+}
+
+.inicioSesion__input label{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 28rem;
+  color: var(--negro);
+  opacity: 60%;
+}
+
+.inicioSesion__input label.active{
+  color: var(--main);
+  transform: translateY(-100%);
+  top: -4rem;
+  left: 0;
+  font-size: 12rem;
+}
+
+.inicioSesion__input .mensaje__error{
+  position: absolute;
+  color: red;
+  font-size: 12rem;
+  right: 0;
+  bottom: -4rem;
+  transform: translateY(100%);
+}
+
+.sesion__registrarse{
+  text-transform: uppercase;
+  color: var(--main);
+  height: 48rem;
+  width: 376rem;
+  border-radius: 24rem;
+  border: 1rem solid var(--main);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.sesion__registrarse:hover{ 
+  filter: brightness(95%);
 }
