@@ -41,5 +41,3 @@ activarOverlay(perfilTurista);
 
 quitarOverlay(perfilAnfitrion);
 quitarOverlay(perfilTurista);
-
-console.log(overlayAnfitrion)

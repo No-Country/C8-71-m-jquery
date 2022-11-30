@@ -14,6 +14,7 @@ font-family: 'Roboto', sans-serif; */
 html {
   /*every 1rem = 1px*/
   font-size: 6.25%;
+  background-color: var(--white);
 }
 
 /* definiendo variables */
@@ -22,6 +23,7 @@ html {
   --white: #fafafa;
   --secundario: rgb(115, 209, 215);
   --negro: #333333;
+  --contraste: #C09665;
 
   --maintext: 16rem;
   --titulo: 40rem;
@@ -421,8 +423,8 @@ gap: 20rem;
   width: 80%;
 }
 
-.sesion__iniciar,
-.sesion__registrarme{
+.sesion__mensaje .sesion__iniciar,
+.sesion__mensaje .sesion__registrarme{
   width: 176rem;
   height: 48rem;
   border-radius: 24rem;
@@ -434,8 +436,8 @@ gap: 20rem;
   margin-right: 20rem;
 }
 
-.sesion__iniciar:hover,
-.sesion__registrarme:hover{
+.sesion__mensaje .sesion__iniciar:hover,
+.sesion__mensaje .sesion__registrarme:hover{
   filter: brightness(130%);
 }
 
