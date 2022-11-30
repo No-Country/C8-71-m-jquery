@@ -1,0 +1,49 @@
+@import url(./main.css);
+
+.bienvenido_contenedor{
+    margin-top: 90rem;
+    display: flex;
+    height: calc(100vh - 180rem);
+    align-items: flex-start;
+    background-image: url(../recursos/background/bienvenida_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pantalla_bienvenida{
+    margin: 0 96rem;
+}
+
+.pantalla_bienvenida h2{
+    margin: 154rem 0 40rem 0;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 48rem;
+}
+
+.pantalla_bienvenida p{
+    font-size: 32rem;
+    margin-bottom: 80rem;
+}
+
+.pantalla_bienvenida .italica{
+    font-style: italic;
+    margin-bottom: 16rem;
+}
+
+.pantalla_bienvenida .volver_inicio{
+    font-size: var(--main);
+    color: var(--white);
+    padding: 16rem 32rem;
+    border: none;
+    border-radius: 24rem;
+    text-transform: uppercase;
+    background-color: var(--main);
+    margin-top: 52rem;
+    cursor: pointer;
+}
+
+.pantalla_bienvenida .volver_inicio:hover{
+  filter: brightness(130%);
+}
+
+
