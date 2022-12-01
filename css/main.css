@@ -44,11 +44,18 @@ header {
   position: fixed;
   top: 0;
   z-index: 100;
+  box-shadow: 0rem 1rem 4rem var(--negro);
+}
+
+.header__contenedor{
+  width: inherit;
+  height: inherit;
+  max-width: 1660rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding: 0 90rem;
-  box-shadow: 0rem 1rem 4rem var(--negro);
+  margin: 0 auto;
+  padding: 0 5%;
 }
 
 .header__logo svg {
@@ -203,7 +210,9 @@ header {
 
 /* SECCION HOSPEDAJES */
 .hospedajes {
-  margin: 0 90rem;
+  padding: 0 5%;
+  margin: 0 auto;
+  max-width: 1660rem;
 }
 
 .hospedajes__titulo {
@@ -292,8 +301,8 @@ header {
 
 .hospedajes__contenedor{
   display: flex;
-  justify-content: space-between;
-  gap: 20rem;
+  justify-content: space-evenly;
+  gap: 32rem;
   flex-flow: row wrap;
 }
 
@@ -306,6 +315,11 @@ header {
   filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
   border-radius: 20rem;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.hospedajes__card:hover{
+  transform: scale(1.02);
 }
 
 .hospedajes__card img{
@@ -343,6 +357,7 @@ header {
 .card__desc .card__titulo{
   justify-content: space-between;
   margin-bottom: 20rem;
+  
 }
 
 .card__rating{
@@ -369,7 +384,11 @@ header {
   font-size: 20rem;
   color: var(--main);
   text-transform: uppercase;
+  white-space: nowrap;
+  max-width: 80%;
+  overflow: hidden;
 }
+
 .hospedajes__mostrar-mas{
 display: flex;
 flex-direction: column;
@@ -399,7 +418,9 @@ gap: 20rem;
 /* INCIO DE SESION */
 
 .sesion {
-  margin: 0 90rem;
+  padding: 0 5%;
+  margin: 0 auto;
+  max-width: 1660rem;
 }
 
 .sesion__subtitulo{
@@ -451,8 +472,14 @@ gap: 20rem;
 
 /* ATRACTIVOS TURISTICOS */
 .turisticos{
-  margin: 40rem 90rem;
-  overflow: hidden;
+  margin: 40rem auto;
+  padding: 0 5%;
+  max-width: 1660rem;
+}
+
+.turisticos_marco{
+  overflow: scroll;
+  /* padding: 0 2%; */
 }
 
 .turisticos__titulo{
@@ -462,6 +489,10 @@ gap: 20rem;
 }
 .turisticos__contenedor{
   width: 3000rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
 }
 
 .turisticos__card{
@@ -496,14 +527,23 @@ gap: 20rem;
 footer{
   width: 100%;
   height: 90rem;
+  background-color: var(--main);
+}
+
+.footer__contenedor{
+  margin: 0 auto;
+  padding: 0 5%;
+  width: inherit;
+  height: inherit;
+  max-width: 1660rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main);
-  gap: 70rem;
+  gap: 5%;
 }
 
 footer p{
+  width: 50%;
   color: var(--white);
   text-transform: uppercase;
 }
