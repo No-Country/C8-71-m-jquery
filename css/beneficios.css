@@ -1,0 +1,139 @@
+@import url(./main.css);
+
+*{
+    text-decoration: none;
+}
+
+.pantalla_caracteristicas{
+    margin: 138rem 0 80rem ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor_general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caracteristicas_contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8rem 300rem;
+    width: 400rem;
+}
+
+.pantalla_caracteristicas h2{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 30rem;
+    margin-bottom: 24rem;
+}
+
+.pantalla_caracteristicas >p{
+    font-size: 18rem;
+    margin-bottom: 48rem;
+    text-align: center;
+    max-width: 700rem;
+}
+
+.caracteristicas_contenedor p{
+    font-size: 18rem;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60rem;
+    height: 28rem;
+    background-color: #D9D9D9;
+    border-radius: 40rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.switch::after{
+    content: "";
+    position: absolute;
+    width: 35rem;
+    height: 28rem;
+    background-color: #898989;
+    border-radius: 40rem;
+}
+
+.offscreen{
+    position: absolute;
+    left: -999999rem;
+}
+
+input[type='checkbox']:checked + .switch::after{
+    transform: translateX(25rem);
+    background-color: var(--main);
+}
+
+input[type='checkbox']:checked + .switch{
+    background-color: var(--secundario);
+}
+
+.slider_bar{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-end;
+    justify-content: center;
+    margin-top: 76rem;
+    width: 100%;
+    align-items: center;
+}
+
+.slider_bar a{
+    font-size: var(--main);
+    color: var(--white);
+    padding: 16rem 32rem;
+    border: none;
+    height: 51rem;
+    border-radius: 24rem;
+    text-transform: uppercase;
+    background-color: var(--main);
+    cursor: pointer;
+}
+
+.slider_bar a:hover{
+    filter: brightness(130%);
+}
+
+.slider_bar .boton_secundario:hover{
+    filter: brightness(95%);
+}
+
+.slider_bar .boton_secundario{
+    font-size: var(--maintext);
+    color: var(--main);
+    padding: 16rem 32rem;
+    border: 2rem solid var(--main);
+    height: 51rem;
+    border-radius: 24rem;
+    text-transform: uppercase;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.progress_bar{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0 30rem;
+}
+
+.progress_bar li{
+    width: 70rem;
+    height: 7rem;
+    border-radius: 8rem;
+    background-color: #BAB9B9;
+    margin: 0 9rem;
+}
+
+.progress_bar .bar_color{
+    background-color: var(--secundario);
+}
