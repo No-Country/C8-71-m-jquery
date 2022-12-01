@@ -17,7 +17,7 @@
   position: relative;
   width: inherit;
   height: inherit;
-  padding: 440rem 140rem 140rem;
+  padding: 56% 20% 20%;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -74,6 +74,12 @@
   background-color: var(--main);
   margin-top: 52rem;
   cursor: pointer;
+  display: none;
+}
+
+.seleccionPerfil .turista__ingresar.active,
+.seleccionPerfil .anfitrion__ingresar.active{
+  display: block;
 }
 
 .seleccionPerfil .turista__ingresar:hover,
@@ -112,7 +118,7 @@
 }
 
 
-.incioSesion__volver{
+.inicioSesion__volver{
   position: absolute;
   top: 20rem;
   left: 20rem;
@@ -128,13 +134,13 @@
   cursor: pointer;
 }
 
-.incioSesion__volver p{
+.inicioSesion__volver p{
   color: var(--negro);
   margin: 0;
   text-transform: uppercase;
 }
 
-.incioSesion__volver:hover{
+.inicioSesion__volver:hover{
   background-color: #ebebeb;
 }
 
