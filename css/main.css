@@ -104,6 +104,7 @@ header {
   padding: 12rem;
   border-radius: 50rem;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .header__opciones a:hover {
@@ -298,12 +299,19 @@ header {
 
 .hospedajes__card{
   position: relative;
-  width: 400rem;
-  height: 400rem;
+  width: 30%;
+  min-width: 380rem;
+  height: 456rem;
   background-color: var(--white);
   filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
   border-radius: 20rem;
   overflow: hidden;
+}
+
+.hospedajes__card img{
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
 }
 
 .card__favorito{
@@ -434,7 +442,6 @@ gap: 20rem;
   text-transform: uppercase;
   color: var(--white);
   margin-right: 20rem;
-  display: block;
 }
 
 .sesion__mensaje .sesion__iniciar:hover,
@@ -466,6 +473,12 @@ gap: 20rem;
   filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
   border-radius: 20rem;
   overflow: hidden;
+}
+
+.turisticos__card img{
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
 }
 
 .turisticos__card .card__desc{

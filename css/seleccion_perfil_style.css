@@ -61,6 +61,7 @@
   font-size: var(--main);
   color: var(--white);
   margin-top: 12rem;
+  text-align: center;
 }
 
 .seleccionPerfil .turista__ingresar,
