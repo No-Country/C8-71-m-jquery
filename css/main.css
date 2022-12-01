@@ -13,7 +13,7 @@ font-family: 'Roboto', sans-serif; */
 
 html {
   /*every 1rem = 1px*/
-  font-size: 6.25%;
+  font-size: 5%;
   background-color: var(--white);
 }
 
@@ -434,6 +434,7 @@ gap: 20rem;
   text-transform: uppercase;
   color: var(--white);
   margin-right: 20rem;
+  display: block;
 }
 
 .sesion__mensaje .sesion__iniciar:hover,

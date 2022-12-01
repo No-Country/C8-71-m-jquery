@@ -53,6 +53,14 @@
     font-size: 24rem;
 }
 
+.categorias_contenedor img{
+    height: 45%;
+}
+
+.categorias:nth-child(2) img{
+    height: 35%;
+}
+
 .slider_bar{
     display: flex;
     flex-direction: row;
