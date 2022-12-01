@@ -8,14 +8,14 @@ const btnAtras = document.querySelectorAll('.inicioSesion__volver');
 
 const cambiarPantalla = (boton, banner, sesion) => {
     boton.classList.remove('active');
-    boton.parentNode.style.padding = '20%';
+    boton.parentNode.style.paddingTop = '0';
     banner.classList.remove('active');
     sesion.classList.add('active');
 }
 
 const volverPantalla = (boton, banner, sesion) => {
     boton.classList.add('active');
-    boton.parentNode.style.padding = '56% 20% 20%';
+    boton.parentNode.style.paddingTop = '40%';
     banner.classList.add('active');
     sesion.classList.remove('active');
 }

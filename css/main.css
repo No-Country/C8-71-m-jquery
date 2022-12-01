@@ -164,15 +164,42 @@ header {
 .banner {
   margin-top: 90rem;
   height: 644rem;
-  width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
-.banner__imagen {
+.banner__slider {
+  position: relative;
   height: inherit;
-  width: 100%;
-  object-fit: cover;
+  width: 500%;
+  display: flex;
+  margin-left: 0%;
 }
+
+.banner__slider .slide{
+  width: 100%;
+  background-size:cover;
+  background-position:center;
+}
+
+.banner__slider .slide.foto1{
+  background-image: url(../recursos/portada-home//portada1.jpg);
+}
+.banner__slider .slide.foto2{
+  background-image: url(../recursos/portada-home//portada2.jpg);
+}
+.banner__slider .slide.foto3{
+  background-image: url(../recursos/portada-home//portada3.jpg);
+}
+.banner__slider .slide.foto4{
+  background-image: url(../recursos/portada-home//portada4.jpg);
+}
+.banner__slider .slide.foto5{
+  background-image: url(../recursos/portada-home//portada5.jpg);
+}
+
+
+
 
 .banner__bottom {
   position: absolute;
@@ -187,7 +214,7 @@ header {
   width: 100%;
 }
 
-.banner__slider {
+.bottom__slider {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -196,7 +223,7 @@ header {
   bottom: 24rem;
 }
 
-.banner__slider button {
+.bottom__slider button {
   height: 10rem;
   width: 10rem;
   border: 1rem solid var(--negro);
@@ -204,7 +231,7 @@ header {
   cursor: pointer;
 }
 
-.banner__slider button.active {
+.bottom__slider button.active {
   background-color: var(--negro);
 }
 
@@ -478,15 +505,26 @@ gap: 20rem;
 }
 
 .turisticos_marco{
-  overflow: scroll;
-  /* padding: 0 2%; */
+  overflow-x: auto;
 }
+
+.turisticos_marco::-webkit-scrollbar{
+  height: 8rem;
+  background-color: var(--white);
+}
+
+.turisticos_marco::-webkit-scrollbar-thumb{
+  background-color: var(--main);
+  border-radius: 24rem;
+}
+
 
 .turisticos__titulo{
   margin: 48rem 0;
   font-size: 24rem;
   text-transform: uppercase;
 }
+
 .turisticos__contenedor{
   width: 3000rem;
   display: flex;
