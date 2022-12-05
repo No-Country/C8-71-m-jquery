@@ -226,13 +226,13 @@ header {
 .bottom__slider button {
   height: 10rem;
   width: 10rem;
-  border: 1rem solid var(--negro);
+  border: 1rem solid var(--main);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .bottom__slider button.active {
-  background-color: var(--negro);
+  background-color: var(--main);
 }
 
 /* SECCION HOSPEDAJES */
