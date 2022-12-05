@@ -101,11 +101,7 @@ header {
 
 .header__opciones {
   margin: 0 48rem;
-}
-.header__opciones a {
   font-size: var(--maintext);
-  text-decoration: none;
-  color: var(--white);
   text-transform: uppercase;
   font-weight: 400;
   padding: 12rem;
@@ -114,7 +110,46 @@ header {
   cursor: pointer;
 }
 
-.header__opciones a:hover {
+.header__opciones a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+.header__opciones i {
+  display: none;
+}
+
+
+.header__opciones i[data-title]:hover:after {
+  opacity: 0.95;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+.header__opciones i[data-title]:after {
+  content: attr(data-title);
+  background-color: var(--white);
+  color: var(--main) ;
+  font-size: var(--maintext);
+  font-family: 'Roboto', sans-serif; 
+  position: absolute;
+  padding: 10rem;
+  bottom: -64rem;
+  right: 0;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px var(--negro);
+  opacity: 0;
+  /* border: 1px solid #111111; */
+  z-index: 99999;
+  visibility: hidden;
+  border-radius: 6px;
+  text-transform:initial;
+  
+}
+.header__opciones i[data-title] {
+  position: relative;
+}
+
+.header__opciones:hover {
   background-color: rgba(115, 209, 215, 0.6);
 }
 
@@ -163,7 +198,7 @@ header {
 /* BANER DE IMAGENES */
 .banner {
   margin-top: 90rem;
-  height: 644rem;
+  height: 680rem;
   position: relative;
   overflow: hidden;
 }
@@ -197,9 +232,6 @@ header {
 .banner__slider .slide.foto5{
   background-image: url(../recursos/portada-home//portada5.jpg);
 }
-
-
-
 
 .banner__bottom {
   position: absolute;
@@ -328,8 +360,9 @@ header {
 
 .hospedajes__contenedor{
   display: flex;
-  justify-content: space-evenly;
-  gap: 32rem;
+  justify-content: space-between;
+  row-gap: 40rem;
+  column-gap: 30rem;
   flex-flow: row wrap;
 }
 
@@ -373,7 +406,7 @@ header {
   cursor: pointer;
 }
 
-.card__favorito.activo i{
+.card__favorito i.active{
   color: OrangeRed;
 }
 
@@ -479,8 +512,7 @@ gap: 20rem;
   width: 80%;
 }
 
-.sesion__mensaje .sesion__iniciar,
-.sesion__mensaje .sesion__registrarme{
+.sesion__mensaje .sesion__iniciar{
   width: 176rem;
   height: 48rem;
   border-radius: 24rem;
@@ -492,10 +524,26 @@ gap: 20rem;
   margin-right: 20rem;
 }
 
-.sesion__mensaje .sesion__iniciar:hover,
-.sesion__mensaje .sesion__registrarme:hover{
+.sesion__mensaje .sesion__registrarme{
+  width: 176rem;
+  height: 48rem;
+  border-radius: 24rem;
+  border: 2px solid var(--main);
+  cursor: pointer;
+  background-color: var(--secundario);
+  text-transform: uppercase;
+  color: var(--main);
+  margin-right: 20rem;
+}
+
+.sesion__mensaje .sesion__iniciar:hover{
   filter: brightness(130%);
 }
+
+.sesion__mensaje .sesion__registrarme:hover{
+  filter: brightness(92%);
+}
+
 
 /* ATRACTIVOS TURISTICOS */
 .turisticos{
@@ -594,4 +642,112 @@ footer a{
 
 footer a i{
   font-size: 24rem;
+}
+
+@media all and (max-width:1087px) {
+  html {
+    /*every 1rem = 1px*/
+    font-size: 4.8%;
+  }
+  
+  header,
+  footer{
+    height: 80rem;
+  }
+
+  .banner {
+    height: 480rem;
+    margin-top: 80rem;
+  }
+
+  .header__logo svg {
+    height: 54rem;
+  }
+
+  .header__contenedor {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header__buscar {
+    display: none;
+  }
+
+  
+  .hospedajes__card{
+    width: 48%;
+  }
+
+  .sesion__mensaje {
+    align-items: center;
+  }
+
+  footer p{
+    font-size: 10rem;
+  }
+}
+
+@media all and (max-width:720px) {
+  html {
+    /*every 1rem = 1px*/
+    font-size: 4%;
+  }
+
+  header,
+  footer{
+    height: 72rem;
+  }
+
+  .header__logo svg {
+    height: 48rem;
+  }
+
+  .header__opciones {
+    background-color: rgba(115, 209, 215, 0.6);
+  }
+  .header__opciones i {
+    display: block;
+  }
+  
+  .header__opciones a span{
+    display: none;
+  }
+  
+  .header__opciones:hover {
+    filter: brightness(130%);
+  }
+
+  .header__perfil {
+    width: 80rem;
+    height: 54rem;
+  }
+
+  .perfil__imagen {
+    height: 40rem;
+    width: 40rem;
+  }
+
+  .bottom__slider button {
+    height: 14rem;
+    width: 14rem;
+    }
+
+    
+  .banner {
+    margin-top: 72rem;
+    height: 320rem;
+  }
+
+  .hospedajes__card{
+    width: 100%;
+  }
+
+  .card__fecha p, .card__email p, .card__telefono p, .card__ubicacion p {
+    font-size: var(--maintext);
+  }
+
+  .sesion__mensaje p {
+    text-align: center;
+    font-size: 20rem;
+    width: 100%;
+  }
 }

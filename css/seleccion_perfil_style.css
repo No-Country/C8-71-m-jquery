@@ -292,3 +292,33 @@
 .sesion__registrarse:hover{ 
   filter: brightness(95%);
 }
+
+@media all and (max-width:1087px) {
+  .seleccionPerfil {
+    margin-top: 80rem;
+    height: calc(100vh - 160rem);
+  }
+}
+
+@media all and (max-width:720px) {
+  .seleccionPerfil {
+    margin-top: 72rem;
+    height: calc(100vh - 144rem);
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .contenedorizq__seleccionPerfil,
+  .contenedorder__seleccionPerfil {
+    height: 100%;
+  }
+  
+  .seleccionPerfil__turista, 
+  .seleccionPerfil__anfitrion {
+    padding-top: 0;
+    height: 100%;
+  }
+
+  .seleccionPerfil p {
+    max-width: 40%;
+  }
+}
