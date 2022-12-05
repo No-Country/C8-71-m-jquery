@@ -68,6 +68,14 @@
     width: 1078rem;
     height: 177rem;
     border-radius: 12rem;
+    padding: 24rem;
+    font-family: 'roboto', sans-serif;
+    font-size: 18rem;
+    outline: none;
+}
+
+.contenedor_texto textarea:focus{
+    border: 3rem solid var(--main);
 }
 
 .contenedor_texto p{
