@@ -45,6 +45,8 @@
     display: flex;
     justify-content: end;
     margin: 16rem 0 0;
+    align-self: end;
+    padding: 0 20%;
 }
 
 .galeria h2{
@@ -79,7 +81,7 @@
 }
 
 .contenedor_texto p{
-   padding: 50rem 50rem;
+   padding: 50rem 0 0;
 }
 
 .descripcion h2{

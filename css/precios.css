@@ -42,7 +42,7 @@
 .pantalla_caracteristicas > p {
   font-size: 20rem;
   text-align: center;
-  max-width: 900rem;
+  max-width: 950rem;
 }
 
 .nice-number {
@@ -52,6 +52,7 @@
 }
 
 input {
+  width: 480rem;
   background: var(--white);
   padding: 24rem 50rem;
   font-size: 30rem;
