@@ -5,9 +5,16 @@
   }
   
 .pantalla_card {
-    margin: 180rem 0;
+    margin: 180rem 0 80rem;
     display: flex;
     justify-content: space-around;
+}
+
+h3 {
+    font-family: 'noto sans display';
+    font-size: 24rem;
+    color: var(--negro);
+    text-transform: uppercase;
 }
   
 .cabecera h2 {
@@ -41,71 +48,65 @@
     max-width: 900rem;
 }
 
-.descripcion_alojamiento p{
+.descripcion_alojamiento p {
     font-size: 18rem;
 }
 
-.contenedor_principal{
+.contenedor_principal {
     display: flex;
     flex-direction: row;
     margin: 40rem 0;
 }
 
-.precio_alojamiento{
+.precio_alojamiento {
     padding: 50rem 24rem;
     border: 4rem solid var(--secundario);
     border-radius: 24rem;
 }
 
-.caja_detalles{
+.caja_detalles {
     margin-left: 24rem;
 }
 
-.precio_alojamiento h3{
+.precio_alojamiento h3 {
     font-family: 'noto sans display';
-    font-size: 44rem;
+    font-size: 56rem;
     color: var(--main);
 }
 
-.precio_alojamiento h4{
+.precio_alojamiento h4 {
     font-size: 27rem;
     font-weight: 500;
 }
 
-.contacto{
+.contacto {
     margin-top: 24rem;
 }
 
-.contacto h3{
-    font-family: 'noto sans display';
-    font-size: 24rem;
-    color: var(--negro);
-    text-transform: uppercase;
-}
-
-.contacto p{
+.contacto p {
     font-size: 18rem;
     color: var(--negro);
     display: flex;
     align-items: center;
 }
 
-.contacto span{
+.contacto span {
     padding: 2rem 12rem 2rem 0;
 }
 
-.galeria_inferior{
+.galeria_inferior {
     display: flex;
     flex-direction: row;
     padding: 0 6rem;
     margin-bottom: 48rem;
 }
 
-.galeria_inferior img{
+.galeria_inferior img {
     padding: 0 6rem;
 }
 
-.puntaje{
+.puntaje, .mobiliario {
+    margin-bottom: 40rem;
     padding: 32rem 32rem;
     border: 2rem solid #949494;
     border-radius: 24rem;
@@ -122,15 +123,8 @@
     color: var(--contraste);
 }
 
-.puntaje_titulo img{
+.puntaje_titulo img {
     margin: 0 6rem 0 24rem;
-}
-
-.puntaje h3{
-    font-family: 'noto sans display';
-    font-size: 24rem;
-    color: var(--negro);
-    text-transform: uppercase;
 }
 
 button {
@@ -143,9 +137,56 @@ button {
     font-size: 16rem;
     font-weight: 500;
     color: var(--white);
-    margin: 0 8rem;
+    cursor: pointer;
 }
   
-  button:hover {
-    filter: brightness(90%);
-  }
+button:hover {
+    filter: brightness(130%);
+}
+
+.mobiliario li {
+    padding: 8rem 0;
+}
+
+.contenedor_listas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenedor_listas ul {
+    list-style: none;
+}
+
+.mobiliario_lista2 {
+    font-size: 20rem;
+    font-weight: 500;
+}
+
+.mobiliario_lista, .mobiliario_lista2 {
+    padding: 0 24rem;
+}
+
+.reclamar {
+    margin-top: 40rem;
+}
+
+.ubicacion, .reclamar {
+    padding: 32rem 32rem;
+    background-color: var(--white);
+    filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
+    border-radius: 24rem;
+    cursor: pointer;
+}
+
+.ubicacion p {
+    margin: 18rem 0 24rem;
+}
+
+.ubicacion img {
+    padding-right: 12rem;
+}
+
+.reclamar p {
+    margin: 18rem 0 24rem;
+}
