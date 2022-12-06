@@ -85,7 +85,8 @@
                 class=""
                 id="user_anfitrion"
                 name="user_anfitrion"
-                type="text" />
+                type="text" 
+                required/>
               <!-- <p class="mensaje__error">introducir correo válido</p> -->
             </div>
 
@@ -99,16 +100,16 @@
             </div>
 
             <button
-              type="button"
+              type="submit"
               id="inciarSesion_anfitrion"
-              class="sesion__iniciar"
-              onclick="window.location.href='./bienvenido.html';">
+              class="sesion__iniciar">
               iniciar sesión
             </button>
             <button
               type="button"
               id="registrarse_anfitrion"
-              class="sesion__registrarse">
+              class="sesion__registrarse" 
+              onclick="window.location.href='./registrarse.html';">
               registrarse
             </button>
           </form>
@@ -154,7 +155,8 @@
                 class=""
                 id="user_turista"
                 name="user_turista"
-                type="text" />
+                type="text" 
+                required/>
               <!-- <p class="mensaje__error">introducir correo válido</p> -->
             </div>
 
@@ -163,12 +165,13 @@
               <input
                 id="password_turista"
                 name="password_turista"
-                type="password" />
+                type="password" 
+                required/>
               <!-- <p class="mensaje__error">introducir correo válido</p> -->
             </div>
 
             <button id="inciarSesion_turista"  class="sesion__iniciar">iniciar sesión</button>
-            <button id="registrarse_turista" class="sesion__registrarse">registrarse</button>
+            <button type="button" id="registrarse_turista" class="sesion__registrarse" onclick="window.location.href='./registrarse.html';">registrarse</button>
 
           </form>
         </div>
@@ -195,7 +198,8 @@
         </div>
       </div>
     </footer>
-
+    <!-- import firebase -->
+    <script type="module" src="../js/firebase.js"></script>
     <script src="../js/seleccionPerfil.js"></script>
     <script src="../js/incioSesionPerfil.js"></script>
   </body>

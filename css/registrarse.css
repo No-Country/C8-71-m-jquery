@@ -1,0 +1,314 @@
+@import url(./main.css);
+
+.registrarse__contenedor {
+  margin: 90rem auto 0;
+  display: flex;
+  height: calc(100vh - 180rem);
+  align-items: center;
+  justify-content: center;
+  max-width: 2000rem;
+}
+.contenedorizq__registrarse__contenedor,
+.contenedorder__registrarse__contenedor {
+  width: 100%;
+  height: inherit;
+}
+
+.registrarse__contenedor__turista,
+.registrarse__contenedor__anfitrion {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  padding-top: 40%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Haciendo visible cuando se tiene la clase 'active' */
+.registrarse__contenedor__turista.active,
+.registrarse__contenedor__anfitrion.active {
+  display: flex;
+}
+
+.turista__overlay,
+.anfitrion__overlay {
+  position: absolute;
+  background-color: black;
+  height: inherit;
+  width: inherit;
+  top: 0;
+  z-index: -100;
+  opacity: 0%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.turista__overlay.active,
+.anfitrion__overlay.active {
+  opacity: 75%;
+  z-index: 100;
+}
+
+.registrarse__contenedor p {
+  font-size: var(--main);
+  color: var(--white);
+  margin-top: 12rem;
+  text-align: center;
+  max-width: 60%;
+}
+
+.registrarse__contenedor .turista__ingresar,
+.registrarse__contenedor .anfitrion__ingresar {
+  font-size: var(--main);
+  color: var(--white);
+  padding: 16rem 32rem;
+  border: none;
+  border-radius: 24rem;
+  text-transform: uppercase;
+  background-color: var(--main);
+  margin-top: 52rem;
+  cursor: pointer;
+  display: none;
+}
+
+.registrarse__contenedor .turista__ingresar.active,
+.registrarse__contenedor .anfitrion__ingresar.active {
+  display: block;
+}
+
+.registrarse__contenedor .turista__ingresar:hover,
+.registrarse__contenedor .anfitrion__ingresar:hover {
+  filter: brightness(130%);
+}
+
+/* INICIO SESION TURISTA y ANFITRION*/
+
+.inicioSesion__turista,
+.inicioSesion__anfitrion {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Haciendo visible cuando se tiene la clase 'active' */
+.inicioSesion__turista.active,
+.inicioSesion__anfitrion.active {
+  display: flex;
+}
+
+.inicioSesion__volver {
+  position: absolute;
+  top: 20rem;
+  left: 20rem;
+  margin: 0;
+  background-color: var(--white);
+  padding: 8rem 16rem;
+  border-radius: 24rem;
+  border: none;
+  color: var(--negro);
+  display: flex;
+  align-items: center;
+  gap: var(--maintext);
+  cursor: pointer;
+}
+
+.inicioSesion__volver p {
+  color: var(--negro);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inicioSesion__volver:hover {
+  background-color: #ebebeb;
+}
+
+.inicioSesion__form--turista,
+.inicioSesion__form--anfitrion {
+  display: flex;
+  flex-direction: column;
+}
+
+.sesion__iniciar {
+  width: 376rem;
+  margin-bottom: 24rem;
+  height: 48rem;
+  border-radius: 24rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--main);
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.sesion__iniciar:hover {
+  filter: brightness(130%);
+}
+
+.inicioSesion__turista h3,
+.inicioSesion__anfitrion h3 {
+  font-size: 30rem;
+  font-weight: normal;
+  margin-bottom: 40rem;
+}
+
+.inicioSesion__turista h3 span,
+.inicioSesion__anfitrion h3 span{
+  
+  font-weight: 600;
+  font-size: 30rem;
+  margin-bottom: 40rem;
+  
+}
+
+.sesion__google {
+  position: relative;
+  height: 48rem;
+  width: 376rem;
+  border-radius: 24rem;
+  border: none;
+  background-color: var(--contraste);
+  color: var(--white);
+  margin-top: 40rem;
+  cursor: pointer;
+}
+
+.sesion__google:hover {
+  filter: brightness(115%);
+}
+
+.sesion__google i {
+  position: absolute;
+  left: 20rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24rem;
+}
+
+.sesion__google span {
+  text-transform: uppercase;
+}
+.separador {
+  position: relative;
+  padding: 28rem 12rem;
+}
+.separador::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: calc((376rem) / 2 - 16rem);
+  border-bottom: 1px solid var(--negro);
+  opacity: 35%;
+}
+
+.separador::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: calc((376rem) / 2 - 16rem);
+  border-bottom: 1px solid var(--negro);
+  opacity: 35%;
+}
+
+.inicioSesion__input {
+  position: relative;
+  margin-bottom: 44rem;
+}
+
+.inicioSesion__input input {
+  height: 48rem;
+  width: 376rem;
+  border-radius: 24rem;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  outline: none;
+  background-color: #ececec;
+  color: var(--negro);
+  padding: 0 28rem;
+  text-transform: lowercase;
+}
+
+.inicioSesion__input input.input__error {
+  border: 1rem solid red;
+}
+
+.inicioSesion__input label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 28rem;
+  color: var(--negro);
+  opacity: 60%;
+}
+
+.inicioSesion__input label.active {
+  color: var(--main);
+  transform: translateY(-100%);
+  top: -4rem;
+  left: 0;
+  font-size: 12rem;
+}
+
+.inicioSesion__input .mensaje__error {
+  position: absolute;
+  color: red;
+  font-size: 12rem;
+  right: 0;
+  bottom: -4rem;
+  transform: translateY(100%);
+}
+
+.sesion__registrarse {
+  text-transform: uppercase;
+  color: var(--main);
+  height: 48rem;
+  width: 376rem;
+  border: none;
+  font-weight: 600;
+  /* border-radius: 24rem; */
+  /* border: 1rem solid var(--main); */
+  background: none;
+  cursor: pointer;
+}
+
+.sesion__registrarse:hover {
+  filter: brightness(135%);
+}
+
+@media all and (max-width: 1087px) {
+  .registrarse__contenedor {
+    margin-top: 80rem;
+    height: calc(100vh - 160rem);
+  }
+}
+
+@media all and (max-width: 720px) {
+  .registrarse__contenedor {
+    margin-top: 72rem;
+    height: calc(100vh - 144rem);
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .contenedorizq__registrarse__contenedor,
+  .contenedorder__registrarse__contenedor {
+    height: 100%;
+  }
+
+  .registrarse__contenedor__turista,
+  .registrarse__contenedor__anfitrion {
+    padding-top: 0;
+    height: 100%;
+  }
+
+  .registrarse__contenedor p {
+    max-width: 40%;
+  }
+}

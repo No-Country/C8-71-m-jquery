@@ -154,6 +154,7 @@ header {
 }
 
 .header__perfil {
+  position: relative;
   width: 116rem;
   height: 59rem;
   border: 2rem solid var(--white);
@@ -173,7 +174,13 @@ header {
 .header__perfil > i {
   color: var(--white);
   font-size: var(--maintext);
+  display: none;
 }
+
+.header__perfil > i.active{
+  display: block;
+}
+
 .perfil__imagen {
   height: 46rem;
   width: 46rem;
@@ -193,6 +200,40 @@ header {
 
 .perfil__imagen img {
   height: inherit;
+}
+
+.perfil_menu{
+  position: absolute;
+  display: none;
+  top: 88%;
+  right: 5%;
+  width: 200rem;
+  background-color: var(--white);
+  flex-direction: column;
+  box-shadow: 1px 1px 3px var(--negro);
+  border-radius: 12rem;
+  overflow: hidden;
+}
+
+.perfil_menu.active{
+  display: flex;
+}
+
+.perfil_menu a{
+  display: none;
+  text-decoration: none;
+  padding: 16rem;
+  color: var(--negro);
+  background-color: white;
+  text-transform: uppercase;
+}
+.perfil_menu a.active{
+  display: block;
+}
+
+.perfil_menu a:hover{
+  filter: brightness(95%);
+  font-weight: 500;
 }
 
 /* BANER DE IMAGENES */
