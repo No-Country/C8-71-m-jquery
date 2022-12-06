@@ -1,0 +1,151 @@
+@import url(./main.css);
+
+* {
+    text-decoration: none;
+  }
+  
+.pantalla_card {
+    margin: 180rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+  
+.cabecera h2 {
+    font-family: 'noto sans display';
+    font-size: 40rem;
+    color: var(--main);
+}
+
+.chips ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 28rem;
+}
+
+.chips li {
+    padding: 12rem 16rem;
+    font-size: 12rem;
+    background-color: var(--main);
+    color: var(--white);
+    border-radius: 24rem;
+    margin: 16rem 4rem;
+    text-transform: uppercase;
+}
+
+.chips .categoria_card {
+    background-color: var(--contraste);
+}
+
+.descripcion_alojamiento {
+    max-width: 900rem;
+}
+
+.descripcion_alojamiento p{
+    font-size: 18rem;
+}
+
+.contenedor_principal{
+    display: flex;
+    flex-direction: row;
+    margin: 40rem 0;
+}
+
+.precio_alojamiento{
+    padding: 50rem 24rem;
+    border: 4rem solid var(--secundario);
+    border-radius: 24rem;
+}
+
+.caja_detalles{
+    margin-left: 24rem;
+}
+
+.precio_alojamiento h3{
+    font-family: 'noto sans display';
+    font-size: 44rem;
+    color: var(--main);
+}
+
+.precio_alojamiento h4{
+    font-size: 27rem;
+    font-weight: 500;
+}
+
+.contacto{
+    margin-top: 24rem;
+}
+
+.contacto h3{
+    font-family: 'noto sans display';
+    font-size: 24rem;
+    color: var(--negro);
+    text-transform: uppercase;
+}
+
+.contacto p{
+    font-size: 18rem;
+    color: var(--negro);
+    display: flex;
+    align-items: center;
+}
+
+.contacto span{
+    padding: 2rem 12rem 2rem 0;
+}
+
+.galeria_inferior{
+    display: flex;
+    flex-direction: row;
+    padding: 0 6rem;
+    margin-bottom: 48rem;
+}
+
+.galeria_inferior img{
+    padding: 0 6rem;
+}
+
+.puntaje{
+    padding: 32rem 32rem;
+    border: 2rem solid #949494;
+    border-radius: 24rem;
+}
+
+.puntaje_titulo {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40rem;
+}
+
+.puntaje_titulo p {
+    font-size: 30rem;
+    color: var(--contraste);
+}
+
+.puntaje_titulo img{
+    margin: 0 6rem 0 24rem;
+}
+
+.puntaje h3{
+    font-family: 'noto sans display';
+    font-size: 24rem;
+    color: var(--negro);
+    text-transform: uppercase;
+}
+
+button {
+    text-transform: uppercase;
+    background-color: var(--main);
+    padding: 16rem 32rem;
+    border: none;
+    outline: none;
+    border-radius: 24rem;
+    font-size: 16rem;
+    font-weight: 500;
+    color: var(--white);
+    margin: 0 8rem;
+}
+  
+  button:hover {
+    filter: brightness(90%);
+  }
