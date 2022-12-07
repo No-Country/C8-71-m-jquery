@@ -31,10 +31,8 @@ onAuthStateChanged(auth, async (user) => {
   } else {
     loggedOutLinks.forEach((link) => link.classList.add("active"));
     loggedInLinks.forEach((link) => link.classList.remove("active"));
-    if (
-      window.location.href.slice(window.location.href.lastIndexOf("/") + 1) !==
-      "index.html"
-    ) {
+    if (window.location.href.slice(window.location.href.lastIndexOf("/") + 1) !==
+      "index.html") {
       window.location.href = "../index.html";
     }
     if (mensajeCuenta) {
