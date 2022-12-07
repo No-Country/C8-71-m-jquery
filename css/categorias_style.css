@@ -84,6 +84,7 @@ header .popUpComenzar.active {
   display: flex;
 }
 
+/* popUp inicio de recorrido anfitrion */
 .popUpComenzar__comenzar {
   position: inherit;
   top: 50%;

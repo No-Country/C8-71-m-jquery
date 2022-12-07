@@ -1,4 +1,4 @@
-const galleryItem = document.getElementsByClassName("galleria-contenedor");
+const galleryItem = document.getElementsByClassName("galeria-contenedor");
 // create element for lightbox
 const lightBoxContainer = document.createElement("div");
 //for basic area
