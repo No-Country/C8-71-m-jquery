@@ -187,6 +187,11 @@ button:hover {
     padding-right: 12rem;
 }
 
+#map {
+	height: 332rem;
+	width: 100%;
+}
+
 .reclamar p {
     margin: 18rem 0 24rem;
 }

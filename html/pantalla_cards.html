@@ -126,7 +126,7 @@
             <div class="ubicacion">
                 <h3>ubicacion</h3>
                 <p><span><img src="/recursos/iconos/icon_ubicacion.svg" alt="ubicacion.svg"></span>Ruta Nacional 135 5,5, Colón, Entre Ríos, Argentina</p>
-                <img src="/recursos/mapa/mapa_coloncard.jpg" alt="mapa_alojamiento.jpg">
+                <div id="map"></div>
             </div>
             <div class="reclamar">
                 <div>
@@ -156,8 +156,10 @@
                 </a>
             </div>
         </div>
+    </footer>
     <!-- import firebase -->
     <script type="module" src="../js/firebase.js"></script>
-    </footer>
+    <script src="/js/mapa.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 </body>
 </html>
