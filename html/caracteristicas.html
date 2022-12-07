@@ -10,7 +10,9 @@
     <script src="https://kit.fontawesome.com/4b73870d5b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/caracteristicas.css" />
-    <link rel="stylesheet" href="../css/jquery.nice-number.css">
+    <link rel="stylesheet" href="../css/jquery.nice-number.css" />
+    <!-- toastify-popUp -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -32,22 +34,68 @@
                     </svg>
                 </a>
             </div>
+
+            <div class="header__buscar">
+
+            </div>
+
+            <div class="header__menu">
+                <div id="agregarAlojamiento" class="header__opciones">
+                    <a href="" hidden>
+                        <span>Agregar mi alojamiento</span>
+                        <i data-title="Agregar mi alojamiento" class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
+
+                <div class="header__perfil">
+                    <div class="perfil__imagen">
+                        <!-- <i class="perfil__icono fa-solid fa-user"></i> -->
+                        <img id="imageProfile" src="../recursos/profile/profile.png" alt="" />
+                    </div>
+                    <i class="fa-solid fa-angle-down active"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="perfil_menu">
+                    <a href="./seleccion_perfil.html" id="menu__sesion--incio" class="loggedOut active">iniciar
+                        sesión</a>
+                    <a href="./registrarse.html" id="menu__sesion--registro" class="loggedOut active">registrarse</a>
+                    <!-- <a href="./html/categorias.html" id="menu__agregar" class="loggedIn">agregar alojamiento</a> -->
+                    <a id="menu__sesion--cerrar" class="loggedIn active">cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="popUpMensaje">
+            <div class="popUpMensaje__mensaje">
+                <!-- <i class="popUpMensaje__cerrar fa-solid fa-xmark"></i> -->
+                <p>¿Desea cerrar su Sesión?</p>
+                <div>
+                    <button id="btnLogOut" type="button" class="sesion__iniciar">
+                        sí
+                    </button>
+                    <button id="btnvolver" type="button" class="sesion__registrarme">
+                        volver
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
         <div class="pantalla_caracteristicas">
             <h2>¿Qué podés ofrecer?</h2>
-            <p>Acá podes determinar todo lo que los inquilinos deben saber sobre tu alojamiento.
-                Contales con qué equipas este complejo para mayor transparencia.</p>
+            <p>
+                Acá podes determinar todo lo que los inquilinos deben saber sobre tu
+                alojamiento. Contales con qué equipas este complejo para mayor
+                transparencia.
+            </p>
             <div class="contenedor_general">
-
                 <div class="caracteristicas_contenedor">
                     <div>
                         <p>Habitaciones</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
@@ -55,7 +103,7 @@
                         <p>Ventiladores</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
@@ -63,7 +111,7 @@
                         <p>Aire acondicionado</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
@@ -71,7 +119,7 @@
                         <p>Microondas</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
@@ -79,7 +127,7 @@
                         <p>Cocina a gas o eléctrica</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
@@ -87,7 +135,7 @@
                         <p>Televisor con cable</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
@@ -95,7 +143,7 @@
                         <p>Camas</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
@@ -103,7 +151,7 @@
                         <p>Baños</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
@@ -111,7 +159,7 @@
                         <p>Duchas</p>
                     </div>
                     <div class="selector_numero">
-                        <input type="number" value="0" min="0">
+                        <input type="number" value="0" min="0" />
                     </div>
                 </div>
             </div>
@@ -150,16 +198,20 @@
         </div>
     </footer>
     <!-- import firebase -->
-    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/mainLogout.js"></script>
+
+    <script src="../js/menuToggle.js"></script>
+
+    <!-- toastify script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/jquery.nice-number.js"></script>
     <script>
         $(function () {
-
             $('input[type="number"]').niceNumber();
-
         });
     </script>
 </body>
+
 </html>

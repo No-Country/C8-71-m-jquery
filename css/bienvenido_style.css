@@ -14,7 +14,8 @@
     margin: 0 96rem;
 }
 
-.pantalla_bienvenida h2{
+.pantalla_bienvenida h2,
+.pantalla_bienvenida h2 span{
     margin: 154rem 0 40rem 0;
     font-family: 'Noto Sans Display', sans-serif;
     font-size: 48rem;

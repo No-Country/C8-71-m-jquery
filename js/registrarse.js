@@ -15,7 +15,7 @@ signupForm.addEventListener('submit', async (e) => {
 
     try {
         const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
-        console.log(userCredentials);
+        // console.log(userCredentials);
         signupForm.reset();
         window.location.href='./bienvenido.html';
 
@@ -23,7 +23,7 @@ signupForm.addEventListener('submit', async (e) => {
         if (error.code === 'auth/email-already-in-use') {
             mensajePop('El correo ya está registrado', 'error');
         }else if (error.code === 'auth/weak-password') {
-            mensajePop('La contraseña es muy insegura', 'error');
+            mensajePop('La contraseña es muy insegura, debe contener al menos 6 caracteres', 'error');
         }else if (error.code === 'auth/invalid-email') {
             mensajePop('Por favor ingrese un correo válido', 'error');
         } else {

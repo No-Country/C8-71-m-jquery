@@ -11,6 +11,8 @@
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/seleccion_perfil_style.css" />
+    <!-- toastify-popUp -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   </head>
 
   <body>
@@ -65,7 +67,7 @@
             <p>Atrás</p>
           </button>
           <h3>¡Te estamos esperando!</h3>
-          <button class="sesion__google">
+          <button id="googleLogIn" class="sesion__google">
             <i class="fa-brands fa-google"></i>
             <span>Iniciar sesión con Google</span>
           </button>
@@ -74,6 +76,7 @@
           </span>
 
           <form
+            id="inicioSesion__form"
             class="inicioSesion__form--anfitrion"
             action=""
             name="inicioSesion__form--anfitrion">
@@ -85,7 +88,7 @@
                 class=""
                 id="user_anfitrion"
                 name="user_anfitrion"
-                type="text" 
+                type="email" 
                 required/>
               <!-- <p class="mensaje__error">introducir correo válido</p> -->
             </div>
@@ -129,53 +132,6 @@
           </button>
         </div>
 
-        <div class="inicioSesion__turista">
-          <button class="inicioSesion__volver">
-            <i class="fa-solid fa-angle-left"></i>
-            <p>Atrás</p>
-          </button>
-          <h3>¡Te estamos esperando!</h3>
-          <button class="sesion__google">
-            <i class="fa-brands fa-google"></i>
-            <span>Iniciar sesión con Google</span>
-          </button>
-          <span class="separador">
-            <span>o</span>
-          </span>
-
-          <form
-            id="inicioSesion__form"
-            class="inicioSesion__form--turista"
-            action=""
-            name="inicioSesion__form--turista">
-            <div class="inicioSesion__input">
-              <label class="" for="user_login"
-                >Usuario o correo electrónico</label
-              >
-              <input
-                class=""
-                id="user_login"
-                name="user_login"
-                type="text" 
-                required/>
-              <!-- <p class="mensaje__error">introducir correo válido</p> -->
-            </div>
-
-            <div class="inicioSesion__input">
-              <label class="" for="password_login">Contraseña</label>
-              <input
-                id="password_login"
-                name="password_login"
-                type="password" 
-                required/>
-              <!-- <p class="mensaje__error">introducir correo válido</p> -->
-            </div>
-
-            <button type="submit" id="inciarSesion_turista"  class="sesion__iniciar">iniciar sesión</button>
-            <button type="button" id="registrarse_turista" class="sesion__registrarse" onclick="window.location.href='./registrarse.html';">registrarse</button>
-
-          </form>
-        </div>
       </div>
     </main>
 
@@ -200,8 +156,10 @@
       </div>
     </footer>
     <!-- import firebase -->
-    <script type="module" src="../js/mainIniciarSesion.js"></script>
     <script src="../js/seleccionPerfil.js"></script>
     <script src="../js/incioSesionPerfil.js"></script>
+    <script src="../js/mainIniciarSesion.js"  type="module" ></script>
+    <!-- toastify script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>

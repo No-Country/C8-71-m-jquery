@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +10,10 @@
     <script src="https://kit.fontawesome.com/4b73870d5b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/beneficios.css" />
+    <!-- toastify-popUp -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
+
 <body>
     <header>
         <div class="header__contenedor">
@@ -29,101 +33,168 @@
                     </svg>
                 </a>
             </div>
+
+            <div class="header__buscar">
+
+            </div>
+
+            <div class="header__menu">
+                <div id="agregarAlojamiento" class="header__opciones">
+                    <a href="" hidden>
+                        <span>Agregar mi alojamiento</span>
+                        <i data-title="Agregar mi alojamiento" class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
+
+                <div class="header__perfil">
+                    <div class="perfil__imagen">
+                        <!-- <i class="perfil__icono fa-solid fa-user"></i> -->
+                        <img id="imageProfile" src="../recursos/profile/profile.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-angle-down active"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="perfil_menu">
+                    <a href='./seleccion_perfil.html' id="menu__sesion--incio" class="loggedOut active">iniciar
+                        sesión</a>
+                    <a href='./registrarse.html' id="menu__sesion--registro" class="loggedOut active">registrarse</a>
+                    <!-- <a href="./html/categorias.html" id="menu__agregar" class="loggedIn">agregar alojamiento</a> -->
+                    <a id="menu__sesion--cerrar" class="loggedIn active">cerrar sesión</a>
+                </div>
+            </div>
         </div>
+
+        <div class="popUpMensaje">
+            <div class="popUpMensaje__mensaje">
+                <!-- <i class="popUpMensaje__cerrar fa-solid fa-xmark"></i> -->
+                <p>¿Desea cerrar su Sesión?</p>
+                <div>
+                    <button id="btnLogOut" type="button" class="sesion__iniciar">sí</button>
+                    <button id="btnvolver" type="button" class="sesion__registrarme">volver</button>
+                </div>
+            </div>
+        </div>
+
     </header>
 
     <main>
         <div class="pantalla_caracteristicas">
             <h2>¿Qué podés ofrecer?</h2>
-            <p>Acá podes determinar todo lo que los inquilinos deben saber sobre tu alojamiento. 
-            Contales con qué equipas este complejo para mayor transparencia.</p>
+            <p>Acá podes determinar todo lo que los inquilinos deben saber sobre tu alojamiento.
+                Contales con qué equipas este complejo para mayor transparencia.</p>
             <div class="contenedor_general">
                 <div class="caracteristicas_contenedor">
-                    <div><p>Pet frendly</p></div>
+                    <div>
+                        <p>Pet frendly</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle" class="offscreen">
                         <label for="toggle" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Piscina</p></div>
+                    <div>
+                        <p>Piscina</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle2" class="offscreen">
                         <label for="toggle2" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Wi-fi</p></div>
+                    <div>
+                        <p>Wi-fi</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle3" class="offscreen">
                         <label for="toggle3" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Desayuno incluido</p></div>
+                    <div>
+                        <p>Desayuno incluido</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle4" class="offscreen">
                         <label for="toggle4" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Quincho</p></div>
+                    <div>
+                        <p>Quincho</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle5" class="offscreen">
                         <label for="toggle5" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Jacuzzi</p></div>
+                    <div>
+                        <p>Jacuzzi</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle6" class="offscreen">
                         <label for="toggle6" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Patio verde</p></div>
+                    <div>
+                        <p>Patio verde</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle7" class="offscreen">
                         <label for="toggle7" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Spa</p></div>
+                    <div>
+                        <p>Spa</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle8" class="offscreen">
                         <label for="toggle8" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Calefacción</p></div>
+                    <div>
+                        <p>Calefacción</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle9" class="offscreen">
                         <label for="toggle9" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Ascensor</p></div>
+                    <div>
+                        <p>Ascensor</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle10" class="offscreen">
                         <label for="toggle10" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Cámaras de seguridad</p></div>
+                    <div>
+                        <p>Cámaras de seguridad</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle11" class="offscreen">
                         <label for="toggle11" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Seguridad privada</p></div>
+                    <div>
+                        <p>Seguridad privada</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle12" class="offscreen">
                         <label for="toggle12" class="switch"></label>
                     </div>
                 </div>
                 <div class="caracteristicas_contenedor">
-                    <div><p>Estacionamiento privado</p></div>
+                    <div>
+                        <p>Estacionamiento privado</p>
+                    </div>
                     <div class="wrap-toggle">
                         <input type="checkbox" id="toggle13" class="offscreen">
                         <label for="toggle13" class="switch"></label>
@@ -166,6 +237,12 @@
         </div>
     </footer>
     <!-- import firebase -->
-    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/mainLogout.js"></script>
+
+    <script src="../js/menuToggle.js"></script>
+
+    <!-- toastify script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +11,10 @@
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/pantalla_cards.css" />
     <link rel="stylesheet" href="../css/jquery.nice-number.css">
+        <!-- toastify-popUp -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
+
 <body>
     <header>
         <div class="header__contenedor">
@@ -30,7 +34,47 @@
                     </svg>
                 </a>
             </div>
+
+            <div>
+            </div>
+
+            <div class="header__menu">
+                <div id="agregarAlojamiento" class="header__opciones" onclick="window.location.href='./categorias.html';">
+                    <a href="./categorias.html" >
+                        <span>Agregar mi alojamiento</span>
+                        <i data-title="Agregar mi alojamiento" class="fa-solid fa-plus"></i>
+                    </a>
+                </div>
+
+                <div class="header__perfil">
+                    <div class="perfil__imagen">
+                        <!-- <i class="perfil__icono fa-solid fa-user"></i> -->
+                        <img id="imageProfile" src="../recursos/profile/profile.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-angle-down active"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="perfil_menu">
+                    <a href='./seleccion_perfil.html' id="menu__sesion--incio" class="loggedOut active">iniciar
+                        sesión</a>
+                    <a href='./registrarse.html' id="menu__sesion--registro" class="loggedOut active">registrarse</a>
+                    <!-- <a href="./html/categorias.html" id="menu__agregar" class="loggedIn">agregar alojamiento</a> -->
+                    <a id="menu__sesion--cerrar" class="loggedIn active">cerrar sesión</a>
+                </div>
+            </div>
         </div>
+
+        <div class="popUpMensaje">
+            <div class="popUpMensaje__mensaje">
+                <!-- <i class="popUpMensaje__cerrar fa-solid fa-xmark"></i> -->
+                <p>¿Desea cerrar su Sesión?</p>
+                <div>
+                    <button id="btnLogOut" type="button" class="sesion__iniciar">sí</button>
+                    <button id="btnvolver" type="button" class="sesion__registrarme">volver</button>
+                </div>
+            </div>
+        </div>
+
     </header>
 
     <main class="pantalla_card">
@@ -51,16 +95,21 @@
                 </ul>
             </div>
             <div class="descripcion_alojamiento">
-                <p>Aratirí Cabañas , han sido pensadas y diseñadas para cuatro cuatro, cinco o seis personas y el confort que ellas merecen,
-                decoradas en un estilo que combinan lo rustico con lo moderno. Con un dormitorio con Somier completo con tv led satelital,
-                dvd, y ventilador. y por el recibidor nos comunicamos con el estar comedor, donde vidrios con paños fijos nos permiten ver
-                el bosque de Eucaliptos y el Campo. Cuenta con equipamiento completo en cocina, heladera con freezer, cocina con horno,
-                tostadora, pava eléctrica, vajilla completa y aire acondicionado frió/calor. El baño es completo con secador de pelo.
-                Desde la cocina se accede a un Decks.</p>
+                <p>Aratirí Cabañas , han sido pensadas y diseñadas para cuatro cuatro, cinco o seis personas y el
+                    confort que ellas merecen,
+                    decoradas en un estilo que combinan lo rustico con lo moderno. Con un dormitorio con Somier completo
+                    con tv led satelital,
+                    dvd, y ventilador. y por el recibidor nos comunicamos con el estar comedor, donde vidrios con paños
+                    fijos nos permiten ver
+                    el bosque de Eucaliptos y el Campo. Cuenta con equipamiento completo en cocina, heladera con
+                    freezer, cocina con horno,
+                    tostadora, pava eléctrica, vajilla completa y aire acondicionado frió/calor. El baño es completo con
+                    secador de pelo.
+                    Desde la cocina se accede a un Decks.</p>
             </div>
             <div class="contenedor_principal">
                 <div class="galeria">
-                    <img src="/recursos/hospedajes/alojamiento_grande.jpg" alt="alojamiento.jpg">
+                    <img src="../recursos/hospedajes/alojamiento_grande.jpg" alt="alojamiento.jpg">
                 </div>
                 <div class="caja_detalles">
                     <div class="precio_alojamiento">
@@ -69,9 +118,12 @@
                     </div>
                     <div class="contacto">
                         <h3>contacto</h3>
-                        <p><span><img src="/recursos/iconos/icon-calendario.svg" alt="calendario.svg"></span> Disponible desde el 15 al 31 de diciembre</p>
-                        <p><span><img src="/recursos/iconos/icon-correo.svg" alt="correo.svg"></span>(03447) 15418340</p>
-                        <p><span><img src="/recursos/iconos/icon-telefono.svg" alt="telefono.svg"></span>ferreteriasolares@hotmail.com</p>
+                        <p><span><img src="/recursos/iconos/icon-calendario.svg" alt="calendario.svg"></span> Disponible
+                            desde el 15 al 31 de diciembre</p>
+                        <p><span><img src="/recursos/iconos/icon-correo.svg" alt="correo.svg"></span>(03447) 15418340
+                        </p>
+                        <p><span><img src="/recursos/iconos/icon-telefono.svg"
+                                    alt="telefono.svg"></span>ferreteriasolares@hotmail.com</p>
                     </div>
                 </div>
             </div>
@@ -125,13 +177,15 @@
             </div>
             <div class="ubicacion">
                 <h3>ubicacion</h3>
-                <p><span><img src="/recursos/iconos/icon_ubicacion.svg" alt="ubicacion.svg"></span>Ruta Nacional 135 5,5, Colón, Entre Ríos, Argentina</p>
+                <p><span><img src="/recursos/iconos/icon_ubicacion.svg" alt="ubicacion.svg"></span>Ruta Nacional 135
+                    5,5, Colón, Entre Ríos, Argentina</p>
                 <img src="/recursos/mapa/mapa_coloncard.jpg" alt="mapa_alojamiento.jpg">
             </div>
             <div class="reclamar">
                 <div>
                     <h3>reclamar</h3>
-                    <p>Reclamar su propiedad es la mejor manera de administrar y proteger su negocio, además obtendrás la insignia "Verificado".</p>
+                    <p>Reclamar su propiedad es la mejor manera de administrar y proteger su negocio, además obtendrás
+                        la insignia "Verificado".</p>
                 </div>
                 <button>realizar reclamo</button>
             </div>
@@ -156,8 +210,15 @@
                 </a>
             </div>
         </div>
-    <!-- import firebase -->
-    <script type="module" src="../js/firebase.js"></script>
     </footer>
+
+    <!-- import firebase -->
+    <script type="module" src="../js/mainLogout.js"></script>
+
+    <script src="../js/menuToggle.js"></script>
+    
+    <!-- toastify script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
+
 </html>

@@ -1,8 +1,21 @@
 import { signOut } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import { auth } from './firebase.js';
-const logout = document.querySelector('#menu__sesion--cerrar');
+import { mensajePop } from './mensajePop.js';
 
-logout.addEventListener('click', async() => {
+const popConfirmar = document.querySelector('.popUpMensaje');
+const btnConfirmar = document.querySelector('#btnLogOut');
+const btnAgregar = document.querySelector('#agregarAlojamiento');
+
+
+btnConfirmar.addEventListener('click', async() => {
     await signOut(auth);
-    console.log('sign out')
+    popConfirmar.classList.remove('active')
+    btnAgregar.children[0].setAttribute('href', '')
+    mensajePop('Sesión cerrada con exito', 'error');
+})
+
+btnAgregar.addEventListener('click', () => {
+    if (btnAgregar.children[0].getAttribute('href')===''){
+        mensajePop('Inicia Sesión para que puedas agregar tu alojamiento', 'error');
+    }
 })

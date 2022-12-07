@@ -11,6 +11,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./css/main.css" />
+    <!-- toastify-popUp -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   </head>
   <body>
     <header>
@@ -47,8 +49,8 @@
         </div>
   
         <div class="header__menu">
-          <div class="header__opciones">
-            <a href="./html/categorias.html">
+          <div id="agregarAlojamiento" class="header__opciones">
+            <a href="">
               <span>Agregar mi alojamiento</span>
               <i data-title="Agregar mi alojamiento" class="fa-solid fa-plus"></i>
             </a>
@@ -56,8 +58,8 @@
   
           <div class="header__perfil" >
             <div class="perfil__imagen">
-              <i class="perfil__icono fa-solid fa-user"></i>
-              <!-- <img src="./recursos/profile/profile.jpg" alt=""> -->
+              <!-- <i class="perfil__icono fa-solid fa-user"></i> -->
+              <img id="imageProfile" src="./recursos/profile/profile.png" alt="">
             </div>
             <i class="fa-solid fa-angle-down active"></i>
             <i class="fa-solid fa-xmark"></i>
@@ -65,13 +67,25 @@
           <div class="perfil_menu">
             <a href='./html/seleccion_perfil.html' id="menu__sesion--incio" class="loggedOut active">iniciar sesión</a>
             <a href='./html/registrarse.html' id="menu__sesion--registro" class="loggedOut active">registrarse</a>
-            <a href="" id="menu__agregar" class="loggedIn">agregar alojamiento</a>
+            <a href="./html/categorias.html" id="menu__agregar" class="loggedIn">agregar alojamiento</a>
             <a id="menu__sesion--cerrar" class="loggedIn active">cerrar sesión</a>
           </div>
         </div>
       </div>
 
+      <div class="popUpMensaje">
+        <div class="popUpMensaje__mensaje">
+          <!-- <i class="popUpMensaje__cerrar fa-solid fa-xmark"></i> -->
+          <p>¿Desea cerrar su Sesión?</p>
+          <div>
+            <button id ="btnLogOut" type="button" class="sesion__iniciar" >sí</button>
+            <button id ="btnvolver" type="button" class="sesion__registrarme">volver</button>
+          </div>
+        </div>
+      </div>
+
     </header>
+
     <section class="banner">
       <div class="banner__slider">
         <div class="slide foto1"></div>
@@ -429,10 +443,10 @@
       </div>
     </main>
 
-    <section class="sesion">
+    <section id="mensajeCuenta" class="sesion active">
       <h2 class="sesion__subtitulo">¿YA TENÉS CUENTA?</h2>
       <div class="sesion__mensaje">
-        <i class="mensaje__cerrar fa-solid fa-xmark"></i>
+        <i id="cerraMensajeCuenta" class="mensaje__cerrar fa-solid fa-xmark"></i>
         <p>Si aún no tenés cuenta te invitamos a formar parte de nuestra comunidad. Para que los demás usuarios turistas puedan ver tus fabolusos alojamientos.</p>
         <div>
           <button type="button" class="sesion__iniciar" onclick="window.location.href='./html/seleccion_perfil.html';">iniciar sesión</button>
@@ -537,5 +551,10 @@
     <script src="./js/sliderBanner.js"></script>
     <script src="./js/activeFavoritos.js"></script>
     <script src="./js/menuToggle.js"></script>
+    <script src="./js/mensajeCuenta.js"></script>
+    <script src="./js/abrirCard.js"></script>
+    
+    <!-- toastify script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>
