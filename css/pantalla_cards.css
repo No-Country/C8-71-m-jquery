@@ -104,20 +104,39 @@ h3 {
 .galeria_contenedor {
     position: relative;
     border-radius: 12rem;
+    height: 180rem;
+    width: 280rem;
+    overflow: hidden;
+    object-fit: cover;
 }
 
-.galeria_contenedor:hover {
+/* .galeria_contenedor img:hover {
     filter: brightness(60%);
+} */
+
+.galeria_contenedor .overlay{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    height: inherit;
+    width: inherit;
+    display: none;
 }
 
-.galeria_contenedor img:hover {
-border-radius: 12rem;}
+
+.galeria_contenedor:hover p,
+.galeria_contenedor:hover .overlay{
+    display: block;
+}
+
 
 .galeria_inferior img {
-    padding: 0 6rem;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
 }
 
 .galeria_inferior p {
+    display: none;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -126,6 +145,8 @@ border-radius: 12rem;}
     font-weight: 500;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
+    z-index: 100;
+    cursor: pointer;
 }
 
 .puntaje, .mobiliario {
