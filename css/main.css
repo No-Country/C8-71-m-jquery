@@ -226,6 +226,7 @@ header {
   color: var(--negro);
   background-color: white;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .perfil_menu a.active{
   display: block;
@@ -768,8 +769,8 @@ footer a i{
   }
 
   .bottom__slider button {
-    height: 14rem;
-    width: 14rem;
+    height: 24rem;
+    width: 24rem;
     }
 
     

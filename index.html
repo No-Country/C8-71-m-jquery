@@ -63,10 +63,10 @@
             <i class="fa-solid fa-xmark"></i>
           </div>
           <div class="perfil_menu">
-            <a href='./html/seleccion_perfil.html' id="menu__sesion--incio" class="active">iniciar sesión</a>
-            <a href='./html/registrarse.html' id="menu__sesion--registro" class="active">registrarse</a>
-            <a href="" id="menu__agregar">agregar alojamiento</a>
-            <a href="" id="menu__sesion--cerrar">cerrar sesión</a>
+            <a href='./html/seleccion_perfil.html' id="menu__sesion--incio" class="loggedOut active">iniciar sesión</a>
+            <a href='./html/registrarse.html' id="menu__sesion--registro" class="loggedOut active">registrarse</a>
+            <a href="" id="menu__agregar" class="loggedIn">agregar alojamiento</a>
+            <a id="menu__sesion--cerrar" class="loggedIn active">cerrar sesión</a>
           </div>
         </div>
       </div>
@@ -532,7 +532,7 @@
       </div>
     </footer>
     <!-- import firebase -->
-    <script type="module" src="./js/firebase.js"></script>
+    <script type="module" src="./js/mainLogout.js"></script>
     <script src="./js/scrollHorizontal.js"></script>
     <script src="./js/sliderBanner.js"></script>
     <script src="./js/activeFavoritos.js"></script>

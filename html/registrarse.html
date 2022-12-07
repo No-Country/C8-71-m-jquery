@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../recursos/iconos/icon.svg" />
     <title>Colón Dreams - C8-71-M</title>
+    <!-- font-awesome -->
     <script
       src="https://kit.fontawesome.com/4b73870d5b.js"
       crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="../css/main.css" /> -->
+    <!-- Estilos de esta pagina -->
     <link rel="stylesheet" href="../css/registrarse.css" />
+    <!-- toastify-popUp -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="import" href="./registrarse.html">
   </head>
 
   <body>
@@ -87,7 +91,7 @@
             <button type="submit" id="registrarse_turista" class="sesion__iniciar">
               registrarme
             </button>
-            <button type="button" onclick="window.location.href='../index.html';" id="registrarse_volver" class="sesion__registrarse">
+            <button type="button" onclick="window.location.href='./seleccion_perfil.html';" id="registrarse_volver" class="sesion__registrarse">
               Ya tengo cuenta
             </button>
           </form>
@@ -122,5 +126,7 @@
 
     <!-- <script src="../js/manageSession.js" ></script> -->
     <script src="../js/main.js" type="module"></script>
+    <!-- toastify script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>

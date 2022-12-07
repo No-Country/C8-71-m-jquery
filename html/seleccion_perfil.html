@@ -144,33 +144,34 @@
           </span>
 
           <form
+            id="inicioSesion__form"
             class="inicioSesion__form--turista"
             action=""
             name="inicioSesion__form--turista">
             <div class="inicioSesion__input">
-              <label class="" for="user_turista"
+              <label class="" for="user_login"
                 >Usuario o correo electrónico</label
               >
               <input
                 class=""
-                id="user_turista"
-                name="user_turista"
+                id="user_login"
+                name="user_login"
                 type="text" 
                 required/>
               <!-- <p class="mensaje__error">introducir correo válido</p> -->
             </div>
 
             <div class="inicioSesion__input">
-              <label class="" for="password_turista">Contraseña</label>
+              <label class="" for="password_login">Contraseña</label>
               <input
-                id="password_turista"
-                name="password_turista"
+                id="password_login"
+                name="password_login"
                 type="password" 
                 required/>
               <!-- <p class="mensaje__error">introducir correo válido</p> -->
             </div>
 
-            <button id="inciarSesion_turista"  class="sesion__iniciar">iniciar sesión</button>
+            <button type="submit" id="inciarSesion_turista"  class="sesion__iniciar">iniciar sesión</button>
             <button type="button" id="registrarse_turista" class="sesion__registrarse" onclick="window.location.href='./registrarse.html';">registrarse</button>
 
           </form>
@@ -199,7 +200,7 @@
       </div>
     </footer>
     <!-- import firebase -->
-    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/mainIniciarSesion.js"></script>
     <script src="../js/seleccionPerfil.js"></script>
     <script src="../js/incioSesionPerfil.js"></script>
   </body>
