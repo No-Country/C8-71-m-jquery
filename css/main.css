@@ -119,7 +119,6 @@ header {
   display: none;
 }
 
-
 .header__opciones i[data-title]:hover:after {
   opacity: 0.95;
   transition: all 0.1s ease 0.5s;
@@ -316,7 +315,6 @@ header .popUpMensaje.active{
 .popUpMensaje__mensaje .sesion__registrarme:hover{
   filter: brightness(92%);
 }
-
 
 /* BANER DE IMAGENES */
 .banner {

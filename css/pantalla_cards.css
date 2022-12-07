@@ -97,12 +97,35 @@ h3 {
 .galeria_inferior {
     display: flex;
     flex-direction: row;
-    padding: 0 6rem;
+    justify-content: space-between;
     margin-bottom: 48rem;
 }
 
+.galeria_contenedor {
+    position: relative;
+    border-radius: 12rem;
+}
+
+.galeria_contenedor:hover {
+    filter: brightness(60%);
+}
+
+.galeria_contenedor img:hover {
+border-radius: 12rem;}
+
 .galeria_inferior img {
     padding: 0 6rem;
+}
+
+.galeria_inferior p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: var(--white);
+    font-size: 18rem;
+    font-weight: 500;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
 }
 
 .puntaje, .mobiliario {
