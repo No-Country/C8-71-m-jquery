@@ -15,6 +15,6 @@ onAuthStateChanged(auth, async (user) => {
     }
 })
 
-setTimeout(() => {
-    window.location.href = "../index.html"; 
-}, 4000);
+// setTimeout(() => {
+//     window.location.href = "../index.html"; 
+// }, 4000);

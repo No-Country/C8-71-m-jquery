@@ -1,5 +1,6 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import { auth } from "./firebase.js";
+import { mensajePop } from './mensajePop.js';
 import "./popUpSesion.js";
 import "./logout.js";
 
@@ -14,7 +15,10 @@ onAuthStateChanged(auth, async (user) => {
     loggedInLinks.forEach((link) => link.classList.add("active"));
     loggedOutLinks.forEach((link) => link.classList.remove("active"));
     if (window.location.href.slice(window.location.href.lastIndexOf("/") + 1) === "index.html") {
-        btnAgregar.children[0].setAttribute("href", "./html/categorias.html");
+      btnAgregar.addEventListener('click', () => {
+        window.location.href = "./html/categorias.html";
+      })
+      
     }
     
     if (mensajeCuenta) {
@@ -31,8 +35,13 @@ onAuthStateChanged(auth, async (user) => {
   } else {
     loggedOutLinks.forEach((link) => link.classList.add("active"));
     loggedInLinks.forEach((link) => link.classList.remove("active"));
-    if (window.location.href.slice(window.location.href.lastIndexOf("/") + 1) !==
-      "index.html") {
+    btnAgregar.addEventListener('click', () => {
+      mensajePop('Inicia Sesión para que puedas agregar tu alojamiento', 'error');
+    })
+    if ((window.location.href.slice(window.location.href.lastIndexOf("/") + 1) !==
+      "index.html") && 
+      (window.location.href.slice(window.location.href.lastIndexOf("/") + 1) !==
+      "pantalla_cards.html")) {
       window.location.href = "../index.html";
     }
     if (mensajeCuenta) {

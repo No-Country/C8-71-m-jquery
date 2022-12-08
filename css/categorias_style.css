@@ -4,6 +4,10 @@
   text-decoration: none;
 }
 
+.header__opciones{
+  display: none;
+}
+
 .pantalla_categorias {
   max-width: 1460rem;
   height: calc(100vh - 180rem);
@@ -93,8 +97,8 @@ header .popUpComenzar.active {
   padding: 0 40rem;
   background-color: var(--white);
   border-radius: 20rem;
-  height: 240rem;
-  width: 40%;
+  height: 320rem;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -145,12 +149,16 @@ header .popUpComenzar.active {
 .slider_bar a {
   font-size: var(--main);
   color: var(--white);
-  padding: 16rem 32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 24rem;
   text-transform: uppercase;
   background-color: var(--main);
   cursor: pointer;
+  height: 52rem;
+  width: 180rem;
 }
 
 .slider_bar a:hover {
@@ -164,12 +172,8 @@ header .popUpComenzar.active {
 .slider_bar .boton_secundario {
   font-size: var(--maintext);
   color: var(--main);
-  padding: 16rem 32rem;
   border: 2rem solid var(--main);
-  border-radius: 24rem;
-  text-transform: uppercase;
   background-color: var(--white);
-  cursor: pointer;
 }
 
 .progress_bar {
@@ -226,14 +230,18 @@ header .popUpComenzar.active {
     max-width: 164rem;
   }
 
+  .slider_bar{
+    justify-content: space-between;
+  }
+
   .progress_bar li {
     width: 16rem;
     height: 8rem;
-    margin: 0 4rem;
   }
 
   .slider_bar .boton_secundario,
   .slider_bar a {
-    padding: 12rem 16rem;
+    height: 48rem;
+    width: 140rem;  
   }
 }

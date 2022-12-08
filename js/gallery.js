@@ -41,7 +41,7 @@ function showLightBox(n) {
 }
 
 function currentImage() {
-    lightBoxContainer.style.display="block";
+    lightBoxContainer.style.display="flex";
 
     let imageIndex = parseInt(this.getAttribute("data-index"));
     showLightBox(index = imageIndex);

@@ -7,15 +7,11 @@ const btnConfirmar = document.querySelector('#btnLogOut');
 const btnAgregar = document.querySelector('#agregarAlojamiento');
 
 
-btnConfirmar.addEventListener('click', async() => {
+btnConfirmar.addEventListener('click', async () => {
     await signOut(auth);
     popConfirmar.classList.remove('active')
-    btnAgregar.children[0].setAttribute('href', '')
+
+    // btnAgregar.children[0].setAttribute('href', '')
     mensajePop('Sesión cerrada con exito', 'error');
 })
 
-btnAgregar.addEventListener('click', () => {
-    if (btnAgregar.children[0].getAttribute('href')===''){
-        mensajePop('Inicia Sesión para que puedas agregar tu alojamiento', 'error');
-    }
-})

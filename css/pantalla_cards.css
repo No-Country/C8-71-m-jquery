@@ -1,13 +1,16 @@
 @import url(./main.css);
+@import url(./categorias_style.css);
 
 * {
     text-decoration: none;
-  }
-  
+}
+
 .pantalla_card {
-    margin: 180rem 0 80rem;
+    margin: 90rem auto 0;
+    padding: 0 5%;
+    max-width: 1460rem;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 h3 {
@@ -16,18 +19,30 @@ h3 {
     color: var(--negro);
     text-transform: uppercase;
 }
-  
+
+.cabecera {
+    width: 100%;
+}
+
 .cabecera h2 {
     font-family: 'noto sans display';
     font-size: 40rem;
     color: var(--main);
+    margin: 20rem 0;
+}
+
+.chips {
+    width: 100%;
 }
 
 .chips ul {
+    width: inherit;
     list-style: none;
     display: flex;
     flex-direction: row;
-    margin-bottom: 28rem;
+    flex-wrap: wrap;
+    margin-bottom: 20rem;
+    gap: 8rem;
 }
 
 .chips li {
@@ -36,16 +51,12 @@ h3 {
     background-color: var(--main);
     color: var(--white);
     border-radius: 24rem;
-    margin: 16rem 4rem;
+    /* margin: 16rem 4rem; */
     text-transform: uppercase;
 }
 
 .chips .categoria_card {
     background-color: var(--contraste);
-}
-
-.descripcion_alojamiento {
-    max-width: 900rem;
 }
 
 .descripcion_alojamiento p {
@@ -56,18 +67,37 @@ h3 {
     display: flex;
     flex-direction: row;
     margin: 40rem 0;
+    gap: 20rem;
 }
 
+.contenedor_principal .galeria {
+    width: 60%;
+    overflow: hidden;
+    border-radius: 8rem;
+}
+
+.contenedor_principal .galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 .precio_alojamiento {
-    padding: 50rem 24rem;
+    height: 176rem;
     border: 4rem solid var(--secundario);
     border-radius: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .caja_detalles {
-    margin-left: 24rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
 }
-
 .precio_alojamiento h3 {
     font-family: 'noto sans display';
     font-size: 56rem;
@@ -80,59 +110,37 @@ h3 {
 }
 
 .contacto {
-    margin-top: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
 }
 
 .contacto p {
     font-size: 18rem;
     color: var(--negro);
-    display: flex;
-    align-items: center;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 20fr;
+    gap: 8rem;
 }
 
 .contacto img {
-    height: 24rem;
-    padding: 2rem 8rem 2rem 0;
+    width: 18rem;
 }
+
 
 .galeria_inferior {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 48rem;
+    gap: 20rem;
 }
-
-.galeria_contenedor {
-    position: relative;
-    border-radius: 12rem;
-    height: 180rem;
-    width: 280rem;
-    overflow: hidden;
-    object-fit: cover;
-}
-
-/* .galeria_contenedor img:hover {
-    filter: brightness(60%);
-} */
-
-.galeria_contenedor .overlay{
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    height: inherit;
-    width: inherit;
-    display: none;
-}
-
-
-.galeria_contenedor:hover p,
-.galeria_contenedor:hover .overlay{
-    display: block;
-}
-
 
 .galeria_inferior img {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -144,10 +152,34 @@ h3 {
     color: var(--white);
     font-size: 18rem;
     font-weight: 500;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
     z-index: 100;
     cursor: pointer;
+    text-align: center;
+}
+
+.galeria_contenedor {
+    position: relative;
+    border-radius: 12rem;
+    height: 180rem;
+    width: 23%;
+    overflow: hidden;
+}
+
+
+.galeria_contenedor .overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+
+.galeria_contenedor:hover p,
+.galeria_contenedor:hover .overlay {
+    display: block;
 }
 
 /*lightbox*/
@@ -161,13 +193,15 @@ h3 {
     top: 0;
     left: 0;
     z-index: 999;
+    justify-content: center;
+    align-items: center;
 }
 
 .lightbox-content {
     position: relative;
     width: 65%;
     height: 58%;
-    margin: 5% auto;
+    margin: auto;
 }
 
 .lightbox-content img {
@@ -196,20 +230,28 @@ h3 {
 }
 
 
-.puntaje, .mobiliario {
+.puntaje,
+.mobiliario {
     margin-bottom: 40rem;
     padding: 32rem 32rem;
     border: 2rem solid #949494;
     border-radius: 24rem;
 }
 
+.puntaje{
+    display: flex;
+    flex-direction: column;
+}
+
 .puntaje_titulo {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     margin-bottom: 40rem;
 }
 
 .puntaje_titulo p {
+    display: flex;
+    align-items: center;
     font-size: 30rem;
     color: var(--contraste);
 }
@@ -229,8 +271,9 @@ button {
     font-weight: 500;
     color: var(--white);
     cursor: pointer;
+    width: 220rem;
 }
-  
+
 button:hover {
     filter: brightness(130%);
 }
@@ -254,20 +297,21 @@ button:hover {
     font-weight: 500;
 }
 
-.mobiliario_lista, .mobiliario_lista2 {
+.mobiliario_lista,
+.mobiliario_lista2 {
     padding: 0 24rem;
 }
 
 .reclamar {
-    margin-top: 40rem;
+    margin: 40rem 0;
 }
 
-.ubicacion, .reclamar {
+.ubicacion,
+.reclamar {
     padding: 32rem 32rem;
     background-color: var(--white);
     filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
     border-radius: 24rem;
-    cursor: pointer;
 }
 
 .ubicacion p {
@@ -279,10 +323,63 @@ button:hover {
 }
 
 #map {
-	height: 332rem;
-	width: 100%;
+    height: 332rem;
+    width: 100%;
 }
 
 .reclamar p {
     margin: 18rem 0 24rem;
 }
+
+@media all and (max-width: 1087px) {
+    .pantalla_card {
+        margin-top: 80rem;
+    }
+}
+
+@media all and (max-width: 720px) {
+    .pantalla_card {
+        margin-top: 72rem;
+    }
+}
+
+@media all and (max-width: 640px) {
+    .contenedor_principal {
+        flex-direction: column;
+        margin: 20rem 0;
+        gap: 20rem;
+    }
+
+    .contenedor_principal .galeria {
+        width: 100%;
+    }
+
+    .caja_detalles {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .caja_detalles .precio_alojamiento{
+        width: 50%;
+    }
+    button {
+        width: 100%;
+    }
+    
+}
+
+@media all and (max-width: 480px) {
+    .caja_detalles {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contenedor_principal .galeria {
+        height: 320rem;
+    }
+
+    .caja_detalles .precio_alojamiento{
+        width: 100%;
+    }
+}
+

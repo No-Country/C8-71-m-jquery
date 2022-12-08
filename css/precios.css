@@ -21,7 +21,8 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 660rem;
+  max-width: 660rem;
+  width: 100%;
   height: 380rem;
   background-color: #b1e5e9;
   border-radius: 24rem;

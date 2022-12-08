@@ -110,7 +110,7 @@ header {
   cursor: pointer;
 }
 
-.header__opciones a{
+.header__opciones p{
   text-decoration: none;
   color: var(--white);
 }
@@ -251,6 +251,15 @@ header .popUpMensaje {
   display: none;
 }
 
+.popUpMensaje__mensaje > div{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20rem;
+}
+
 header .popUpMensaje.active{
   display: block;
 }
@@ -263,6 +272,7 @@ header .popUpMensaje.active{
   padding: 0 40rem;
   background-color: var(--white);
   border-radius: 20rem;
+  width: 50%;
   height: 240rem;
   display: flex;
   flex-direction: column;
@@ -834,7 +844,7 @@ footer a i{
     display: block;
   }
   
-  .header__opciones a span{
+  .header__opciones p span{
     display: none;
   }
   
