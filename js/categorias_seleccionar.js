@@ -5,7 +5,7 @@ const btnVolver = document.querySelector('#btnComenzar');
 
 setTimeout(() => {
     popComenzar.classList.add('active')
-}, 2000);
+}, 1500);
 
 const cerrarPop = () => {
     btnVolver.addEventListener('click', () => {
