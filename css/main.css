@@ -204,8 +204,8 @@ header {
 .perfil_menu{
   position: absolute;
   display: none;
-  top: 88%;
-  right: 5%;
+  top: 100%;
+  right: 14%;
   width: 200rem;
   background-color: var(--white);
   flex-direction: column;
@@ -897,5 +897,17 @@ footer a i{
     text-align: center;
     font-size: 20rem;
     width: 100%;
+  }
+
+  .perfil_menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .perfil_menu a{
+    border-bottom: 1px solid var(--main);
   }
 }
