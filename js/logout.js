@@ -4,7 +4,7 @@ import { mensajePop } from './mensajePop.js';
 
 const popConfirmar = document.querySelector('.popUpMensaje');
 const btnConfirmar = document.querySelector('#btnLogOut');
-const btnAgregar = document.querySelector('#agregarAlojamiento');
+// const btnAgregar = document.querySelector('#agregarAlojamiento');
 
 
 btnConfirmar.addEventListener('click', async () => {
@@ -13,5 +13,8 @@ btnConfirmar.addEventListener('click', async () => {
 
     // btnAgregar.children[0].setAttribute('href', '')
     mensajePop('Sesión cerrada con exito', 'error');
+    setTimeout(() => {
+        location.reload();
+    }, 1500);
 })
 
