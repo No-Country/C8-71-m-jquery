@@ -271,7 +271,7 @@ button {
     font-weight: 500;
     color: var(--white);
     cursor: pointer;
-    width: 220rem;
+    width: 230rem;
 }
 
 button:hover {
@@ -325,6 +325,7 @@ button:hover {
 #map {
     height: 332rem;
     width: 100%;
+    border-radius: 14rem;
 }
 
 .reclamar p {
