@@ -1,4 +1,4 @@
-const galleryItem = document.getElementsByClassName("galeria-contenedor");
+const galleryItem = document.getElementsByClassName("galeria_contenedor");
 // create element for lightbox
 const lightBoxContainer = document.createElement("div");
 //for basic area
@@ -18,10 +18,10 @@ lightBoxContent.classList.add('lightbox-content');
 lightBoxPrev.classList.add("fa","fa-angle-left","lightbox-prev");
 lightBoxNext.classList.add("fa","fa-angle-right","lightbox-next");
 
-lightBoxContainer.appendChild.add(lightBoxContent);
-lightBoxContent.appendChild.add(lightBoxImg);
-lightBoxContent.appendChild.add(lightBoxPrev);
-lightBoxContent.appendChild.add(lightBoxNext);
+lightBoxContainer.appendChild(lightBoxContent);
+lightBoxContent.appendChild(lightBoxImg);
+lightBoxContent.appendChild(lightBoxPrev);
+lightBoxContent.appendChild(lightBoxNext);
 document.body.appendChild(lightBoxContainer)
 
 
@@ -32,11 +32,11 @@ let index = 1
 function showLightBox(n) {
     if (n > galleryItem.length) {
         index = 1;
-    } else if (n > 1) {
+    } else if (n < 1) {
         index = galleryItem.length;
     }
 
-    let imageLocation = galleryItem[index-1].children[0].getAttribute("src");
+    let imageLocation = galleryItem[index-1].children[2].getAttribute("src");
     lightBoxImg.setAttribute("src",  imageLocation);
 }
 
@@ -53,20 +53,17 @@ for (let i = 0; i< galleryItem.length; i++) {
 }
 
 
-function sliderImage(n) {
-    lightBoxContainer.style.display="block";
-
-    let imageIndex = parseInt(this.getAttribute("data-index"));
+function slideImage(n) {
     showLightBox(index += n);
 }
 
 
 function prevImage() {
-    sliderImage(-1);
+    slideImage(-1);
 }
 
 function nextImage() {
-    sliderImage(1);
+    slideImage(1);
 }
 
 lightBoxPrev.addEventListener("click", prevImage);
