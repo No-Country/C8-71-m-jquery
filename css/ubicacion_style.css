@@ -6,25 +6,24 @@
 }
 
 .pantalla_ubicacion{
-  margin: 90rem auto 0;
+  margin: 168rem auto 48px;
   padding: 0 5%;
   max-width: 1460rem;
-  height: calc(100vh - 180rem);
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
 }
 
-.pantalla_ubicacion h2 {
+h2 {
   font-family: "Noto Sans Display", sans-serif;
   font-size: 30rem;
-  /* margin-bottom: 24rem; */
+  margin-bottom: 24rem;
 }
 
-.pantalla_ubicacion p {
+p {
   font-size: 18rem;
-  /* margin-bottom: 48rem; */
+  margin-bottom: 48rem;
 }
 
 .ubicacion_contenedor img {
@@ -38,6 +37,30 @@
   width: 100%;
   overflow: hidden;
   border-radius: 24rem;
+}
+
+.telefono_contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.telefono_contenedor h2 {
+  margin-top: 64rem;
+}
+
+.telefono_contenedor input {
+  margin-bottom: 120rem;
+  height: 48rem;
+  width: 376rem;
+  border-radius: 24rem;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  outline: none;
+  background-color: #ececec;
+  color: var(--negro);
+  padding: 0 28rem;
+  text-transform: lowercase;
 }
 
 @media all and (max-width: 1087px) {
