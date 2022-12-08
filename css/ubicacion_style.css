@@ -26,31 +26,50 @@ p {
   margin-bottom: 48rem;
 }
 
-.ubicacion_contenedor img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.ubicacion h3 {
+  font-family: 'noto sans display';
+  font-size: 24rem;
+  color: var(--negro);
+  text-transform: uppercase;
 }
 
-.ubicacion_contenedor {
-  max-width: 720rem;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 24rem;
+.ubicacion{
+    padding: 32rem 32rem;
+    width: 50%;
+    height: 100%;
+    background-color: var(--white);
+    filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
+    border-radius: 24rem;
+}
+
+.ubicacion p {
+    margin: 18rem 0 24rem;
+}
+
+.ubicacion img {
+    padding-right: 12rem;
+}
+
+#map {
+    height: 332rem;
+    width: 100%;
+    border-radius: 14rem;
 }
 
 .telefono_contenedor {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50rem
 }
 
 .telefono_contenedor h2 {
   margin-top: 64rem;
 }
 
-.telefono_contenedor input {
-  margin-bottom: 120rem;
+.telefono_contenedor input,
+.ubicacion input {
+  /* margin-bottom: 120rem; */
   height: 48rem;
   width: 376rem;
   border-radius: 24rem;
@@ -60,7 +79,12 @@ p {
   background-color: #ececec;
   color: var(--negro);
   padding: 0 28rem;
-  text-transform: lowercase;
+  /* text-transform: capitalize; */
+}
+
+.ubicacion input{
+  width: 100%;
+  margin: 20rem 0;
 }
 
 @media all and (max-width: 1087px) {

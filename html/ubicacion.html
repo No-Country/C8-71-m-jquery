@@ -90,20 +90,15 @@
         <div class="pantalla_ubicacion">
             <h2>Dirección de tu alojamiento</h2>
             <p>Esta dirección es para indicar a los usuarios dónde se ubica tu alojamiento</p>
-            <div class="ubicacion_contenedor">
-              <!-- Search input -->
-              <input id="searchInput" class="controls" type="text" placeholder="¿Qué estás buscando?">
-              <!-- Google map -->
-              <div id="map"></div>
-              <!-- Display geolocation data -->
-              <ul class="geo-data">
-                  <li>Full Address: <span id="location"></span></li>
-                  <li>Postal Code: <span id="postal_code"></span></li>
-                  <li>Country: <span id="country"></span></li>
-                  <li>Latitude: <span id="lat"></span></li>
-                  <li>Longitude: <span id="lon"></span></li>
-              </ul>
+
+            <div class="ubicacion">
+                <h3>Ubicación</h3>
+                <!-- <p><span><img src="/recursos/iconos/icon_ubicacion.svg" alt="ubicacion.svg"> -->
+                <!-- </span>Ruta Nacional 135 5,5, Colón, Entre Ríos, Argentina</p> -->
+                <input id="inputDir" type="text" name="ubicacion" placeholder="Ingrese dirección">
+                <div id="map"></div>
             </div>
+
             <div class="telefono_contenedor">
               <h2>Número de celular</h2>
               <p>Dejanos un número de celular, para que los usuarios te puedan contactar.</p>
@@ -151,8 +146,7 @@
 
     <!-- toastify script -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap" async defer></script>
     <script src="../js/map_places.js"></script>
-    <script src="../js/categorias_seleccionar.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9pCUymx4aHckyRNxRGDBNt5w_bT9dzAA&libraries=places&callback=iniciarMap"></script>
 </body>
 </html>
