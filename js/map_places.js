@@ -1,7 +1,7 @@
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -33.8688, lng: 151.2195},
-      zoom: 13
+        center: { lat: -33.8688, lng: 151.2195 },
+        zoom: 13
     });
     var input = document.getElementById('searchInput');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -15,7 +15,7 @@ function initMap() {
         anchorPoint: new google.maps.Point(0, -29)
     });
 
-    autocomplete.addListener('place_changed', function() {
+    autocomplete.addListener('place_changed', function () {
         infowindow.close();
         marker.setVisible(false);
         var place = autocomplete.getPlace();
@@ -23,7 +23,7 @@ function initMap() {
             window.alert("Autocomplete's returned place contains no geometry");
             return;
         }
-  
+
         // If the place has a geometry, then present it on a map.
         if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
@@ -40,25 +40,25 @@ function initMap() {
         }));
         marker.setPosition(place.geometry.location);
         marker.setVisible(true);
-    
+
         var address = '';
         if (place.address_components) {
             address = [
-              (place.address_components[0] && place.address_components[0].short_name || ''),
-              (place.address_components[1] && place.address_components[1].short_name || ''),
-              (place.address_components[2] && place.address_components[2].short_name || '')
+                (place.address_components[0] && place.address_components[0].short_name || ''),
+                (place.address_components[1] && place.address_components[1].short_name || ''),
+                (place.address_components[2] && place.address_components[2].short_name || '')
             ].join(' ');
         }
-    
+
         infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
         infowindow.open(map, marker);
-      
+
         // Location details
         for (var i = 0; i < place.address_components.length; i++) {
-            if(place.address_components[i].types[0] == 'postal_code'){
+            if (place.address_components[i].types[0] == 'postal_code') {
                 document.getElementById('postal_code').innerHTML = place.address_components[i].long_name;
             }
-            if(place.address_components[i].types[0] == 'country'){
+            if (place.address_components[i].types[0] == 'country') {
                 document.getElementById('country').innerHTML = place.address_components[i].long_name;
             }
         }
