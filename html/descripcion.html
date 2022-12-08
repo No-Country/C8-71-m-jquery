@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/descripcion.css" />
     <link rel="stylesheet" href="../css/jquery.nice-number.css" />
-        <!-- toastify-popUp -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- toastify-popUp -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -79,7 +79,19 @@
                 </div>
             </div>
         </div>
+
+        <div class="popUpComenzar">
+            <div class="popUpComenzar__comenzar">
+                <!-- <i class="popUpComenzar__cerrar fa-solid fa-xmark"></i> -->
+                <h3>¡Muy bien, has terminado!</h3>
+                <p>¡Felicitaciones, su alojamiento ha sido registrado con éxito, ahora todos los usuarios podrán ver tu hospedaje en Colón Dreams!</p>
+                <div>
+                    <button id="btnComenzar" type="button" class="comenzar__proceso">volver a inicio</button>
+                </div>
+            </div>
+        </div>
     </header>
+
     <main class="pantalla_caracteristicas">
         <div class="galeria">
             <h2>Mostrate al público</h2>
@@ -115,8 +127,11 @@
                 del establecimiento, etc.
             </p>
             <div class="contenedor_texto">
-                <p><textarea name="comentario" rows="5" cols="50" placeholder="Escribí tu comentario acá"></textarea></p>
-                <div class="pie_texto"><p><span>0</span>/1000 caracteres</p></div>
+                <p><textarea name="comentario" rows="5" cols="50" placeholder="Escribí tu comentario acá"></textarea>
+                </p>
+                <div class="pie_texto">
+                    <p><span>0</span>/1000 caracteres</p>
+                </div>
             </div>
         </div>
 
@@ -130,7 +145,7 @@
                 <li class="bar_color"></li>
                 <li class="bar_color"></li>
             </ul>
-            <a href="#">finalizar</a>
+            <a id="btnFinalizar" href="#">finalizar</a>
         </div>
     </main>
 
@@ -155,7 +170,7 @@
     </footer>
     <!-- import firebase -->
     <script type="module" src="../js/mainLogout.js"></script>
-
+    <script src="../js/descripcion.js"></script>
     <script src="../js/menuToggle.js"></script>
 
     <!-- toastify script -->

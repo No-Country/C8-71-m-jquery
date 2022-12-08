@@ -65,7 +65,8 @@
   height: 35%;
 }
 
-/* popUp cerrar sesion */
+
+/* popUp inicio de recorrido anfitrion */
 
 header .popUpComenzar {
   position: absolute;
@@ -84,7 +85,6 @@ header .popUpComenzar.active {
   display: flex;
 }
 
-/* popUp inicio de recorrido anfitrion */
 .popUpComenzar__comenzar {
   position: inherit;
   top: 50%;
