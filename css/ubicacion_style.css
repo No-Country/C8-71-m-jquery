@@ -18,10 +18,10 @@
 h2 {
   font-family: "Noto Sans Display", sans-serif;
   font-size: 30rem;
-  margin-bottom: 24rem;
+  margin: 24rem 0;
 }
 
-p {
+.pantalla_ubicacion p {
   font-size: 18rem;
   margin-bottom: 48rem;
 }
@@ -35,8 +35,8 @@ p {
 
 .ubicacion{
     padding: 32rem 32rem;
-    width: 50%;
-    height: 100%;
+    width: 80%;
+    height: 520rem;
     background-color: var(--white);
     filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
     border-radius: 24rem;
@@ -51,7 +51,7 @@ p {
 }
 
 #map {
-    height: 332rem;
+    height: 320rem;
     width: 100%;
     border-radius: 14rem;
 }
@@ -90,7 +90,7 @@ p {
 @media all and (max-width: 1087px) {
   .pantalla_ubicacion {
     margin-top: 80rem;
-    height: calc(100vh - 160rem);
+    /* height: calc(100vh - 160rem); */
   }
 
   .ubicacion_contenedor{
@@ -101,7 +101,7 @@ p {
 @media all and (max-width: 720px) {
   .pantalla_ubicacion {
     margin-top: 72rem;
-    height: calc(100vh - 144rem);
+    /* height: calc(100vh - 144rem); */
   }
 
 }
