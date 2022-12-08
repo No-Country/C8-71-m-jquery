@@ -90,8 +90,9 @@ h3 {
     align-items: center;
 }
 
-.contacto span {
-    padding: 2rem 12rem 2rem 0;
+.contacto img {
+    height: 24rem;
+    padding: 2rem 8rem 2rem 0;
 }
 
 .galeria_inferior {

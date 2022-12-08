@@ -18,9 +18,14 @@
 
 .contenedor_general{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     position: relative;
+}
+
+.contenedor_agregarimagenes{
+    display: flex;
+    flex-direction: row;
 }
 
 .agregar_imagen{
@@ -45,6 +50,7 @@
 .pie_texto{
     display: flex;
     justify-content: end;
+    width: 100%;
 }
 
 .galeria h2{
@@ -87,7 +93,7 @@
 }
 
 .pie_texto p {
-    padding: 8rem 0 0;
+    padding: 16rem 16rem 0 0;
 }
 
 .descripcion h2{
