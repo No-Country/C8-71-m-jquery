@@ -6,7 +6,7 @@
   height: calc(100vh - 180rem);
   align-items: center;
   justify-content: center;
-  max-width: 2000rem;
+  max-width: 1920px;
 }
 .contenedorizq__seleccionPerfil,
 .contenedorder__seleccionPerfil{
