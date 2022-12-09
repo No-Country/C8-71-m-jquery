@@ -14,6 +14,7 @@ En este sitio, como usuario puedes encontrar alojamientos para tus vacaciones o 
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Desarrolladores](#desarrolladores)
+- [Comunicación](#comunicación)
 
 </br>
 
@@ -45,12 +46,19 @@ Se maqueteo el proyecto utilizando HTML y CSS, en css se utilizó especialmente 
 ## Screenshot
 ![](./recursos/mockup/RESPONSIVE-MOCKUP.jpg)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hrjg0nz_8eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3 align="center"  ><b>Puedes revisar nuestra web aquí:</b></h3>
+<h3 align="center"><a href="https://colondreams.web.app/" target="_blank" rel="noopener noreferrer"> 🌴 Colón Dreams </a></h3>
+</br>
+<p  align="center" ><a href="https://youtu.be/Hrjg0nz_8eo" target="_blank" rel="noopener noreferrer"> <img src="https://img.shields.io/badge/Video Preview%20-%23FF0000.svg?&style=for-the-badge&logo=YouTube&logoColor=white"/></a></p>
+
+</br>
 
 ## Links
 
-- Sitio web: [Colon Dreams](https://colondreams.web.app/)
+- Sitio web: [Colón Dreams](https://colondreams.web.app/)
 - GitHub: [C8-71-m-jquery](https://github.com/No-Country/C8-71-m-jquery)
+
+</br>
 
 ## Desarrolladores
 - UX/UI Designer: Cristian Hernández
@@ -59,3 +67,7 @@ Se maqueteo el proyecto utilizando HTML y CSS, en css se utilizó especialmente 
 - FrontEnd Developer: Arnold Balabarca
   - Github - [arn28](https://github.com/arn28)
 
+</br>
+
+## Comunicación
+[![](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=fff)](https://discord.gg/dyxDxw8w) [![](https://img.shields.io/badge/Slack-%23ED8B00?style=for-the-badge&logo=Slack&logoColor=fff)](https://slack.com/intl/es-pe/) ![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)
