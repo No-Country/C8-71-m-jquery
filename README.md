@@ -1,4 +1,4 @@
-<img src='./recursos/mockup/portada.jpg'></img>
+<a href="https://colondreams.web.app/" target="_blank" rel="noopener noreferrer"><img src='./recursos/mockup/portada.jpg'></img></a>
 # Colón Dreams
 
 Presentamos a Colón Dreams, un proyecto de página web responsive desarrollado en el [Cohorte 8 de No Country](https://www.nocountry.tech/developers).
